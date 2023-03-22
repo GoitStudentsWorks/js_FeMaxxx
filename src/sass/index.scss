@@ -1,0 +1,25 @@
+//BACE
+@import "./bace/vars";
+@import "./bace/bace";
+@import "./bace/container";
+
+//GENERAL SECTIONS
+@import "./header";
+@import "./news-card";
+@import "./climate";
+@import "./footer";
+
+//INDEX
+@import "./index/filters-date";
+@import "./index/filters";
+@import "./index/date";
+@import "./index/main";
+
+//FAVORITE
+@import "./favorite/main";
+
+//READ
+@import "./read/main";
+
+//MODERN-NORMALIZE
+@import "~node_modules/modern-normalize/modern-normalize.css";
