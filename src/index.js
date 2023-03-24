@@ -6,3 +6,6 @@ import "./JS/climate/climate";
 
 //THEME
 import "./JS/theme";
+
+//MODAL
+import "./JS/modal";
