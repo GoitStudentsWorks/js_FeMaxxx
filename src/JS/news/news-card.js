@@ -4,7 +4,7 @@ const input = document.querySelector(".search-form-input");
 const btnSearch = document.querySelector(".search-form-button");
 const gallery = document.querySelector(".card-news");
 
-btnSearch.addEventListener("click", onBtnCreate);
+// btnSearch.addEventListener("click", onBtnCreate);
 
 let newArray = [];
 
