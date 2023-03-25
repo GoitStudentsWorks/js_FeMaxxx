@@ -7,5 +7,9 @@ import "./JS/climate/climate";
 //THEME
 import "./JS/theme";
 
+//PAGINATION
+import "./JS/pagination";
+
 //MODAL
 import "./JS/modal";
+
