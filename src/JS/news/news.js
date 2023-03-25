@@ -1,3 +1,5 @@
+import "./news-card";
+
 //SEARCH
 import "./news-search";
 
@@ -6,3 +8,4 @@ import "./news-popular";
 
 //CATEGORIES
 import "./news-categories";
+
