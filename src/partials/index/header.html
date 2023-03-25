@@ -1,62 +1,95 @@
-<header class="header">    
+<header class="header">
   <div class="container header__container">
     <nav class="header__navigation">
-      <a class="header-logo link" id="logo" href="/src/index.html" rel="home" lang="en">News</a>
-      <ul class="list header-list">
+      <a
+        class="header-logo link"
+        id="logo"
+        href="/src/index.html"
+        rel="home"
+        lang="en"
+        >News
+      </a>
+
+      <ul class="header-list">
+        <li class="header-list__item current">
+          <a class="header-list__link link" href="/src/index.html">Home</a>
+        </li>
+
         <li class="header-list__item">
-          <a class="header-list__link link current" href="/src/index.html">Home</a>
+          <a class="header-list__link link" href="/src/favorite.html"
+            >Favorite</a
+          >
         </li>
-        <li class="header-list__item"> 
-          <a class="header-list__link link" href="/src/favorite.html">Favorite</a>
-        </li>
+
         <li class="header-list__item">
           <a class="header-list__link link" href="/src/read.html">Read</a>
         </li>
       </ul>
-    </nav>  
+    </nav>
+
     <div class="btn-container">
       <button type="button" class="open-search-input" data-input-open>
         <svg class="icon-open-input" width="18" height="18">
           <use href="/src/images/sprite.svg#search"></use>
         </svg>
       </button>
+
       <button type="button" class="open-mob-menu" data-menu-open>
         <svg class="icon-open-mob-menu" width="20" height="20">
           <use href="/src/images/sprite.svg#burger"></use>
         </svg>
       </button>
     </div>
-  </div>  
-  <div class="mob-menu visually-hidden" data-menu>
-    <!-- <div class="container"> -->
-      <div class="mob-menu-top">
-        <a class="header-logo link header-logo-mob" id="logo" href="/src/index.html" rel="home" lang="en">News</a>
-        <button type="button" class="close-mob-menu" data-menu-close>
-          <svg class="icon-close-mob-menu" width="20" height="20">
-            <use href="/src/images/sprite.svg#close"></use>
-          </svg>
-        </button>    
-        <ul class="list mob-menu-list">
-          <li class="mob-menu__item">
-            <svg class="icon-open-input" width="18" height="18">
-              <use href="/src/images/sprite.svg#home"></use>
-            </svg>
-            <a class="mob-menu__link link current" href="#home">Home</a>
-            <svg class="icon-open-input" width="18" height="18">
-              <use href="/src/images/sprite.svg#up-arrow"></use>
-            </svg>
-          </li>
-          <li class="mob-menu__item">
-            <a class="mob-menu__link link mob-menu-favorite-link" href="/src/favorite.html">Favorite</a>
-          </li>
-          <li class="mob-menu__item">
-            <a class="mob-menu__link link mob-menu-favorite-link" href="/src/read.html">Read</a>
-          </li>
-        </ul>  
-      </div>
-      <div class="mob-menu-button">
-        <div class="switcher"></div>
-      </div>  
-    <!-- </div>    -->
-  </div>        
+  </div>
 </header>
+
+<div class="mob-menu visually-hidden" data-menu>
+  <div class="mob-menu-top">
+    <a
+      class="header-logo link header-logo-mob"
+      id="logo"
+      href="/src/index.html"
+      rel="home"
+      lang="en"
+      >News
+    </a>
+
+    <button type="button" class="close-mob-menu" data-menu-close>
+      <svg class="icon-close-mob-menu" width="20" height="20">
+        <use href="/src/images/sprite.svg#close"></use>
+      </svg>
+    </button>
+
+    <ul class="mob-menu-list">
+      <li class="mob-menu__item">
+        <svg class="icon-open-input" width="18" height="18">
+          <use href="/src/images/sprite.svg#home"></use>
+        </svg>
+        <a class="mob-menu__link current" href="#home">Home</a>
+        <svg class="icon-open-input" width="18" height="18">
+          <use href="/src/images/sprite.svg#up-arrow"></use>
+        </svg>
+      </li>
+
+      <li class="mob-menu__item">
+        <a
+          class="mob-menu__link link mob-menu-favorite-link"
+          href="/src/favorite.html"
+          >Favorite</a
+        >
+      </li>
+
+      <li class="mob-menu__item">
+        <a
+          class="mob-menu__link link mob-menu-favorite-link"
+          href="/src/read.html"
+          >Read</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div class="mob-menu-button">
+    <div class="switcher"></div>
+  </div>
+</div>
