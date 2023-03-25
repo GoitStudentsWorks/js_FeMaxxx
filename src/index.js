@@ -9,3 +9,10 @@ import "./JS/theme";
 
 //HEADER
 import "./JS/header"
+
+//PAGINATION
+import "./JS/pagination";
+
+//MODAL
+import "./JS/modal";
+
