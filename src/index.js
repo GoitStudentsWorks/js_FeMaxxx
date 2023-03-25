@@ -6,3 +6,6 @@ import "./JS/climate/climate";
 
 //THEME
 import "./JS/theme";
+
+//HEADER
+import "./JS/header"
