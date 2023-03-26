@@ -27,6 +27,28 @@ function proccesImageCreate(foundData) {
   } else {
     renderImageList(createCard);
   }
+
+  const btnLike = document.querySelectorAll(".card-news__btn-like");
+  const spanAdd = document.querySelectorAll(".card-news__add-to-favorite-btn");
+  const iconLike = document.querySelectorAll(".card-news__icon-like");
+
+  btnLike.forEach((btn, index) => {
+    let isFavorite = false; // начальное значение
+
+    btn.addEventListener("click", () => {
+      if (!isFavorite) {
+        spanAdd[index].textContent = "Remove from favorite";
+        iconLike[index].style.fill = "var(--color1, #4440f7)";
+        btn.classList.add("favorite"); // добавить класс
+        isFavorite = true; // обновить значение
+      } else {
+        spanAdd[index].textContent = "Add to favorite";
+        iconLike[index].style.fill = "";
+        btn.classList.remove("favorite"); // убрать класс
+        isFavorite = false; // обновить значение
+      }
+    });
+  });
 }
 
 function renderImageList(card) {
@@ -51,7 +73,8 @@ function renderImageList(card) {
   <button class="card-news__btn-like">
     <span class="card-news__add-to-favorite-btn"
       >Add to favorite
-      <svg
+    </span>
+    <svg
         class="card-news__icon-like"
         width="16"
         height="16"
@@ -66,7 +89,6 @@ function renderImageList(card) {
           d="M10.666 2.286c-4.207 0-7.619 3.377-7.619 7.543 0 3.363 1.333 11.345 14.458 19.413 0.235 0.143 0.505 0.219 0.78 0.219s0.545-0.076 0.78-0.219c13.125-8.069 14.458-16.050 14.458-19.413 0-4.166-3.412-7.543-7.619-7.543s-7.619 4.571-7.619 4.571-3.412-4.571-7.619-4.571z"
         ></path>
       </svg>
-    </span>
   </button>
   <div class="card-news__wrapper">
     <h3 class="card-news__caption">${array.headline}</h3>
