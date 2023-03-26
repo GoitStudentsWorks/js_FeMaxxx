@@ -119,8 +119,18 @@ function renderImageList(card) {
         });
         // Обновляем локальное хранилище
         localStorage.setItem("favoriteCards", JSON.stringify(favoriteCards));
-
-        // ... остальной код обработки нажатия на кнопку лайка ...
+        isFavorite = true;
+      } else {
+        // Удаляем информацию о карточке из массива
+        const cardIndex = favoriteCards.findIndex(
+          card => card.headline === newArray[index].headline
+        );
+        if (cardIndex !== -1) {
+          favoriteCards.splice(cardIndex, 1);
+          // Обновляем локальное хранилище
+          localStorage.setItem("favoriteCards", JSON.stringify(favoriteCards));
+        }
+        isFavorite = false;
       }
     });
   });
