@@ -1,74 +1,76 @@
 .search-icon__svg {
-    display: block;
-    position: absolute;
-   
-   @media screen and (max-width:767px) {
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-   
-   
-   }
-    @media screen and (min-width: 768px) {
-      top: 0;
-      bottom: 0;
-      margin: auto 0;
-      left: 12px;
-    }
-  }
-  
-  .close-icon__svg{
-    display: block;
-    stroke: black;
-  }
-  
-  .theme-icon__sun{
-    fill: transparent;
-    stroke: #4B48DB;
-  }
-  .theme-icon__moon{
-    fill: transparent;
-    stroke: #5f6775;
-  }
-  
-  
-  .search-input  {
-  // 
-    
-    display: block;
-    transition: all 0.5s cubic-bezier(0.87, -0.41, 0.19, 1.44);
-    width: 100%;
-    border-radius: 20px;
-  
-    position: relative;
-    border: 1px solid #111321;
-  
-    font-size: 14px;
-    height: 31px;
-    padding: 5px 0 5px 40px;
-  
-  }
-  
-  
-  .search-form {
-    display: flex;
-    width: 200px;
-    position: relative;
-    margin-right: 14px;
-    align-items: center;
-   
-  }
-  
-  
-  
-  .active {
-    
-    left: 12px;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
  
-   
+  @media screen and (min-width: 768px) {
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 12px;
   }
+}
+
+
+.theme-icon__sun{
+  fill: transparent;
+  stroke: #4B48DB;
+}
+.theme-icon__moon{
+  fill: transparent;
+  stroke: #5f6775;
+}
+
+
+.search-input  {
+// 
   
+  display: block;
+  transition:  0.5s;
+width: 100%;
+  border-radius: 20px;
+  position: relative;
+  border: 1px solid #111321;
+
+  font-size: 14px;
+  height: 31px;
+  padding: 5px 0 5px 40px;
+
+}
+
+
+.search-form {
+  
+  display: flex;
+  width: 30%;
+  align-items: center;
+  position: relative;
+  // margin-right: 14px;
+  align-items: center;
+ 
+  @media screen and (max-width:767px) {
+      width: 100%;
+      justify-content: center;
+  }
+  @media screen and (min-width:768px) {
+    width: 120px;
+  }
+  @media screen and (min-width:1280px
+  ) {
+    width: 280px;
+  }
+
+}
+
+
+
+
+.active {
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}

@@ -4,7 +4,8 @@ const openBtn = document.querySelector(".open-input");
 const icon = document.querySelector(".search-icon__svg");
 const form = document.querySelector(".search-form");
 openBtn.addEventListener("click", showInput);
-
+window.addEventListener('resize', checkSize)
+checkSize()
 let searchQuery = "";
 
 export async function fetchArticles() {
@@ -33,7 +34,25 @@ async function onSearch(e) {
   await fetchArticles(searchQuery);
 }
 
-function showInput() {
-  searchInput.classList.toggle("visually-hidden");
-  icon.classList.toggle("active");
+ function showInput() {
+    
+    icon.classList.add('active')
+   
+    searchInput.classList.remove('visually-hidden')
+   
+}
+if(showInput){
+    // openBtn.removeAttribute('type', 'button')
+    openBtn.setAttribute('type', 'submit')
+}
+
+function checkSize(){
+
+    if(document.documentElement.clientWidth < 768){
+        searchInput.classList.add('visually-hidden')
+       }
+        else{
+           searchInput.classList.remove('visually-hidden')
+        }
+       
 }
