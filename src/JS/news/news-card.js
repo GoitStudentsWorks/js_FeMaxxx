@@ -5,7 +5,7 @@ const input = document.querySelector(".search-input");
 const btnSearch = document.querySelector(".open-input");
 const form = document.querySelector(".search-form");
 const newsCard = document.querySelector(".card-news");
-
+let favoriteCards = [];
 form.addEventListener("submit", onBtnCreate);
 
 function onBtnCreate(event) {
@@ -102,4 +102,26 @@ function renderImageList(card) {
     })
     .join("");
   newsCard.innerHTML = markup;
+
+  const btnLike = document.querySelectorAll(".card-news__btn-like");
+  btnLike.forEach((btn, index) => {
+    let isFavorite = false;
+    btn.addEventListener("click", () => {
+      if (!isFavorite) {
+        // Добавляем информацию о карточке в массив
+        favoriteCards.push({
+          headline: newArray[index].headline,
+          abstract: newArray[index].abstract,
+          category: newArray[index].category,
+          pub_date: newArray[index].pub_date,
+          photo: newArray[index].photo,
+          url: newArray[index].url,
+        });
+        // Обновляем локальное хранилище
+        localStorage.setItem("favoriteCards", JSON.stringify(favoriteCards));
+
+        // ... остальной код обработки нажатия на кнопку лайка ...
+      }
+    });
+  });
 }
