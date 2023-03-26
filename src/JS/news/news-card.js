@@ -1,12 +1,12 @@
 import { fetchImages } from "./fetch-news-search";
 import Notiflix from "notiflix";
-const input = document.querySelector(".search-form-input");
-const btnSearch = document.querySelector(".search-form-button");
-const gallery = document.querySelector(".card-news");
 
-// btnSearch.addEventListener("click", onBtnCreate);
+const input = document.querySelector(".search-input");
+const btnSearch = document.querySelector(".open-input");
+const form = document.querySelector(".search-form");
+const newsCard = document.querySelector(".card-news");
 
-let newArray = [];
+form.addEventListener("submit", onBtnCreate);
 
 function onBtnCreate(event) {
   event.preventDefault();
@@ -28,8 +28,8 @@ function proccesImageCreate(foundData) {
     renderImageList(createCard);
   }
 }
-
 function renderImageList(card) {
+  let newArray = [];
   const markup = card
     .map(card => {
       const array = {
@@ -41,7 +41,7 @@ function renderImageList(card) {
         url: card.web_url,
       };
       newArray.push(array);
-      console.log(card);
+
       return `
         <li class="card-news__item">
   <img class="card-news__img" src="${array.photo}" alt="" loading="lazy" />
@@ -55,5 +55,5 @@ function renderImageList(card) {
       `;
     })
     .join("");
-  gallery.innerHTML += markup;
+  newsCard.innerHTML = markup;
 }

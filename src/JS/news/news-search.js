@@ -18,6 +18,5 @@ function searchOptimizeArray(result) {
     newArray.push(array);
   });
 
-  console.log(newArray);
   return newArray;
 }

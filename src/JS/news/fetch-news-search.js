@@ -4,6 +4,7 @@ export async function fetchImages(value) {
   try {
     const response = await fetch(`${BASE_URL}${value}&api-key=${KEY_URL}`);
     const newCard = await response.json();
+    console.log(newCard);
     return newCard;
   } catch (error) {
     console.log(error);
