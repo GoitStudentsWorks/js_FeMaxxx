@@ -1,7 +1,6 @@
 import { fetchImages } from "./fetch-news-search";
 import Notiflix from "notiflix";
-import moment from "moment";
-("");
+
 const input = document.querySelector(".search-input");
 const btnSearch = document.querySelector(".open-input");
 const form = document.querySelector(".search-form");
