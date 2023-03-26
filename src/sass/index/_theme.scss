@@ -5,9 +5,21 @@
   
   
   .dark-theme {
-    
+    transition: 0.5s;
       background-color: #2E2E2E;
-    .theme-icon__sun{
+      .header-list__item  {
+        color: #F4F4F4;
+       }
+       .icon-open-mob-menu{
+        stroke: #F4F4F4;
+       }
+       .open-login-form{
+        fill: #F4F4F4;
+       }
+       .header-logo{
+        color: #F4F4F4;
+       }
+    .theme-icon__sun {
       stroke: #5F6775;
     }
     .theme-icon__moon{
@@ -36,7 +48,14 @@
   
   .theme{
     display: flex;
-   
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+    @media screen and (min-width:768px) {
+      position: absolute;
+      right: 40;
+  }
+
   }
   
   
