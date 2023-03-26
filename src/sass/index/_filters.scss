@@ -69,3 +69,37 @@
   opacity: 1;
   transform: scaleY(1);
 }
+.cont_disk {
+  display: none;
+}
+
+.cont_tab {
+  display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+  .cont_mob {
+    display: none;
+  }
+  .cont_disk {
+    display: none;
+  }
+  .cont_tab {
+    display: block;
+  }
+}
+
+
+
+@media screen and (min-width: 1280px) {
+  .cont_mob {
+    display: none;
+  }
+  .cont_tab {
+    display: none;
+  }
+  .cont_disk {
+    display: block;
+  }
+}
