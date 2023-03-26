@@ -1,0 +1,73 @@
+.read-date {
+    border-bottom: 1px solid #929292;
+    position: absolute; 
+ 
+    } 
+
+
+.spoiler_wrap {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 22px;
+    border-radius: 5px;
+    height: fit-content;
+
+}
+
+.spoiler_title {
+    cursor: pointer;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+
+
+letter-spacing: 0.02em;
+
+color: #111321;
+
+}
+
+
+.spoiler_content {
+    
+    padding-bottom: 10px;
+    transition: 0.15s ease-out;
+    height: auto;
+    max-height: 0px;
+    overflow: hidden;
+    margin-top: -10px;
+    opacity: 0;
+    font-size: 14px;
+    color: #444;
+}
+
+
+
+.spoiler_content.open {
+    margin-top: 0;
+    max-height: 100%;
+    opacity: 1;
+}
+
+.spoiler_title .spoiler_arrow {
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 20px;
+    transition: all .1s;
+    vertical-align: middle;
+    margin-bottom: 8px;
+}
+
+.spoiler_title .spoiler_arrow svg {
+    fill: #111321;
+    
+    
+}
+.spoiler_title .spoiler_arrow.open {
+    transform: rotate(180deg);
+    margin-bottom: 0;
+}
