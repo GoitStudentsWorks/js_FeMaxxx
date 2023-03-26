@@ -1,6 +1,7 @@
 import { fetchImages } from "./fetch-news-search";
 import Notiflix from "notiflix";
-
+import moment from "moment";
+("");
 const input = document.querySelector(".search-input");
 const btnSearch = document.querySelector(".open-input");
 const form = document.querySelector(".search-form");
@@ -36,7 +37,7 @@ function renderImageList(card) {
         headline: card.headline.main,
         abstract: card.abstract,
         category: card.section_name,
-        pub_date: card.pub_date,
+        pub_date: card.pub_date.slice(0, 10),
         photo: card.multimedia[0].url,
         url: card.web_url,
       };
@@ -45,6 +46,12 @@ function renderImageList(card) {
       return `
         <li class="card-news__item">
   <img class="card-news__img" src="${array.photo}" alt="" loading="lazy" />
+  <span class="card-news__categories">${array.category}</span>
+  <button class="card-news__btn-like">
+  Add to favorite<svg class="card-news__icon-like" width="10px" height="16px">
+    <use href="/src/images/sprite.svg#heart"></use>
+  </svg>
+</button>
   <h3 class="card-news__caption">${array.headline}</h3>
   <p class="card-news__text">${array.abstract}</p>
   <div class="card-news__box">
