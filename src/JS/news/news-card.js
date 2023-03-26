@@ -38,7 +38,9 @@ function renderImageList(card) {
         abstract: card.abstract,
         category: card.section_name,
         pub_date: card.pub_date.slice(0, 10),
-        photo: card.multimedia[0].url,
+        photo: card.multimedia.length
+          ? `https://static01.nyt.com/${card.multimedia[0].url}`
+          : "https://img.freepik.com/free-vector/internet-network-warning-404-error-page-or-file-not-found-for-web-page_1150-48326.jpg?w=996&t=st=1676297842~exp=1676298442~hmac=6cad659e6a3076ffcb73bbb246c4f7e5e1bf7cee7fa095d67fcced0a51c2405c",
         url: card.web_url,
       };
       newArray.push(array);
