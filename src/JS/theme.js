@@ -6,8 +6,6 @@ checkbox.addEventListener("click", changeTheme);
 
 body.className = localStorage.getItem("theme");
 function changeTheme() {
-
-
   body.classList.toggle("dark-theme");
   body.classList.toggle("light-theme");
   if (body.classList.contains("dark-theme")) {
@@ -20,24 +18,7 @@ function changeTheme() {
   body.className = localStorage.getItem("theme");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-///////////////////// 
+/////////////////////
 
 jQuery(document).ready(function ($) {
   $(".spoiler_title").click(function () {
