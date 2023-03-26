@@ -15,10 +15,11 @@ function onBtnCreate(event) {
   if (!searchFormInput) {
     return;
   }
-  fetchImages(searchFormInput).then(proccesImageCreate);
+  fetchImages(searchFormInput, 2).then(proccesImageCreate);
 }
 
 function proccesImageCreate(foundData) {
+  console.log(foundData);
   const createCard = foundData.response.docs;
   if (!createCard.length) {
     Notiflix.Notify.failure(
