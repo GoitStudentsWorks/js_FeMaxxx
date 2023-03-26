@@ -17,6 +17,5 @@ function popularOptimizeArray(result) {
     newArray.push(array);
   });
 
-  console.log(newArray);
   return newArray;
 }
