@@ -8,11 +8,11 @@ import "./JS/climate/climate";
 import "./JS/theme";
 
 //HEADER
-import "./JS/header"
+import "./JS/header";
 
 //FORM
 
-import "./JS/form"
+import "./JS/form";
 
 //PAGINATION
 import "./JS/pagination";
@@ -20,3 +20,6 @@ import "./JS/pagination";
 //MODAL
 import "./JS/modal";
 
+//CAlendar
+
+import "./JS/calendar";
