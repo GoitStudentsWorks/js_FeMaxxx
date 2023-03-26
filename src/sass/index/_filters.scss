@@ -1,74 +1,71 @@
 // ЦЯ СЕКЦІЯ ВЖЕ ЗНАХОДИТЬСЯ В КОНТЕНЕРІ ЗАЙДИ В index.html І ПОДИВИСЬ
-.read-date {
-    border-bottom: 1px solid #929292;
-    position: absolute; 
- 
-    } 
+.filters-buttons {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+}
+.topmenu {
+  display: flex;
+  gap: 16px;
+}
+.topmenu-li {
+//   font-family: "Manrope";
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 12px;
+  position: relative;
+}
+.topmenu-li button {
+  padding: 7.5px 24px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--accent-color);
+  background-color: var(--light-text-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
 
-
-.spoiler_wrap {
-    position: relative;
-    margin-bottom: 20px;
-    font-size: 22px;
-    border-radius: 5px;
-    height: fit-content;
-
+  &:hover {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+  }
 }
 
-.spoiler_title {
-    cursor: pointer;
+.submenu {
+  background: var(--white-color);
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 5;
+  width: 168px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: 0.5s ease-in-out;
 
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-
-
-letter-spacing: 0.02em;
-
-color: #111321;
 
 }
+.submenu button {
+  color: var(--accent-color);
+  background-color: var(--white-color);
+  border: none;
+  text-align: left;
+  padding: 12px 15px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
 
-
-.spoiler_content {
-    
-    padding-bottom: 10px;
-    transition: 0.15s ease-out;
-    height: auto;
-    max-height: 0px;
-    overflow: hidden;
-    margin-top: -10px;
-    opacity: 0;
-    font-size: 14px;
-    color: #444;
+  &:hover{
+    background-color: var(--white-color);
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
 }
-
-стили в фильтер
-
-.spoiler_content.open {
-    margin-top: 0;
-    max-height: 100%;
-    opacity: 1;
-}
-
-.spoiler_title .spoiler_arrow {
-    display: inline-block;
-    margin-left: 8px;
-    margin-right: 8px;
-    font-size: 20px;
-    transition: all .1s;
-    vertical-align: middle;
-    margin-bottom: 8px;
-}
-
-.spoiler_title .spoiler_arrow svg {
-    fill: #111321;
-    
-    
-}
-.spoiler_title .spoiler_arrow.open {
-    transform: rotate(180deg);
-    margin-bottom: 0;
+.submenu li:last-child button { border-bottom: none; }
+.topmenu > li:hover .submenu {
+  opacity: 1;
+  transform: scaleY(1);
 }
