@@ -41,21 +41,27 @@
 }
 
 .card-news__icon-like {
-  fill: currentColor;
+  fill: #fff;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  right: 12px;
+  stroke: var(--color1, #4440f7);
+}
+
+.card-news__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .card-news__caption {
   height: 132px;
   margin-top: 20px;
-  margin-right: 41px;
-  margin-left: 1px;
   font-size: 32px;
   line-height: 1.4;
   overflow: hidden;
 }
 .card-news__text {
   margin-top: 20px;
-  margin-right: 41px;
-  margin-left: 1px;
   width: 353px;
   height: 66px;
   left: 1px;
