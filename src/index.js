@@ -15,7 +15,7 @@ import "./JS/header";
 import "./JS/form";
 
 //PAGINATION
-import "./JS/pagination";
+import "./JS/pagination/pagination";
 
 //MODAL
 import "./JS/modal";
