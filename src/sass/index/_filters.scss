@@ -3,17 +3,16 @@
   font-weight: 400;
   font-size: 12px;
 }
+
 .topmenu {
   display: flex;
   gap: 16px;
 }
+
 .topmenu-li {
-  //   font-family: "Manrope";
-  //   font-style: normal;
-  //   font-weight: 400;
-  //   font-size: 12px;
   position: relative;
 }
+
 .topmenu-li button {
   padding: 7.5px 24px;
   font-size: 12px;
@@ -42,14 +41,13 @@
   transform-origin: 0 0;
   transition: 0.5s ease-in-out;
 }
+
 .submenu button {
   color: var(--accent-color);
   background-color: var(--white-color);
   border: none;
   text-align: left;
   padding: 12px 15px;
-  font-family: "Manrope";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
 
@@ -59,13 +57,16 @@
     text-decoration: underline;
   }
 }
+
 .submenu li:last-child button {
   border-bottom: none;
 }
+
 .topmenu > li:hover .submenu {
   opacity: 1;
   transform: scaleY(1);
 }
+
 .cont_disk {
   display: none;
 }
@@ -78,9 +79,11 @@
   .cont_mob {
     display: none;
   }
+
   .cont_disk {
     display: none;
   }
+
   .cont_tab {
     display: block;
   }
@@ -90,9 +93,11 @@
   .cont_mob {
     display: none;
   }
+
   .cont_tab {
     display: none;
   }
+
   .cont_disk {
     display: block;
   }
