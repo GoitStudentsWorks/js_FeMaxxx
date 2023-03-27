@@ -5,6 +5,7 @@
 .dark-theme {
   transition: 0.5s;
   background-color: #2e2e2e;
+  color: var(--white-color);
   .header-list__item {
     color: #f4f4f4;
   }
@@ -18,7 +19,7 @@
     color: #f4f4f4;
   }
   .theme-icon__sun {
-    stroke: #5f6775;
+    stroke: #f4f4f4;
   }
   .theme-icon__moon {
     stroke-width: 1.5px;

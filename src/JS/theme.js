@@ -15,6 +15,7 @@ function changeTheme() {
   } else {
     localStorage.setItem("theme", "light-theme");
   }
+
   body.className = localStorage.getItem("theme");
 }
 
