@@ -9,3 +9,4 @@ import "./news-popular";
 //CATEGORIES
 import "./news-categories";
 
+import "./news-filters";

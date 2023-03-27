@@ -1,3 +1,8 @@
+.active {
+  background-color: var(--accent-color) !important;
+  color: var(--white-color) !important;
+}
+
 .filters-buttons {
   font-weight: 400;
   font-size: 12px;
@@ -20,6 +25,8 @@
   background-color: var(--light-text-color);
   border: 1px solid var(--accent-color);
   border-radius: 20px;
+
+  transition: background-color var(--animation), color var(--animation);
 
   &:hover {
     background-color: var(--accent-color);
