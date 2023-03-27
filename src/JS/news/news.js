@@ -1,11 +1,8 @@
-import "./news-card";
-
 //SEARCH
-import "./news-search";
+import "./render-search";
 
 //POPULAR
-import "./news-popular";
+import "./render-popular";
 
 //CATEGORIES
-import "./news-categories";
-
+import "./render-category";
