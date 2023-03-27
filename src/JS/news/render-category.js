@@ -7,6 +7,8 @@ import { btnRead } from "./btn-read";
 import { renderByWidth } from "./window-width";
 import { markupOfCard } from "./markup-of-card";
 
+const undefinedImages = document.querySelector(".undefined");
+
 buttonsContainer.addEventListener("click", choiceFilter);
 
 function choiceFilter(e) {
