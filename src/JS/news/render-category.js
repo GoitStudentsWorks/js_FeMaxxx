@@ -24,7 +24,9 @@ function proccesImageCreate(foundData) {
     Notiflix.Notify.failure(
       "Sorry, there are no images matching your search query. Please try again."
     );
+    undefinedImages.style.display = "block";
   } else {
+    undefinedImages.style.display = "none";
     renderImageList(createCard);
   }
 }
