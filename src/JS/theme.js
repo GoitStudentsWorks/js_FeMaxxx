@@ -16,8 +16,6 @@ mobCheckbox.addEventListener("click", change);
 mobSlider.addEventListener("click", change);
 
 body.className = localStorage.getItem("theme");
-// slider.className = localStorage.getItem('slider')
-//   checkbox.className = localStorage.getItem('checkbox')
 
 if (localStorage.getItem("slider") != null) {
   slider.classList.add(localStorage.getItem("slider"));
