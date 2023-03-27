@@ -9,9 +9,9 @@ function choiceFilter(e) {
     return;
   }
 
-  e.target.classList.add("active");
+  e.target.classList.add("active-filter");
 
-  buttonSelected?.classList?.remove("active");
+  buttonSelected?.classList?.remove("active-filter");
 
   buttonSelected = e.target;
 }

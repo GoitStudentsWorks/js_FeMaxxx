@@ -17,6 +17,7 @@
   font-size: 24px;
   padding-top: 24px;
   padding-bottom: 24px;
+  margin-right: 15px;
 
   &:hover,
   &:focus {
@@ -85,20 +86,19 @@
 }
 
 .open-search-input,
-.open-login-form
- {
+.open-login-form {
   background-color: transparent;
   border: 0;
   display: flex;
   align-items: center;
 }
 
-.open-login-form{
+.open-login-form {
   margin-left: 14px;
   &:hover,
-    &:focus {
-      stroke: var(--accent-color);
-    }
+  &:focus {
+    stroke: var(--accent-color);
+  }
 }
 
 .close-mob-menu {
@@ -209,14 +209,14 @@
 }
 
 .log-reg-button {
-    cursor: pointer;
-    font-size: medium;
-      border-radius: 10px;
-      font-weight: 500;
-      margin: 5px 5px;
-      width: 150px;
-      padding: 10px 0;
-      box-shadow: 0 0 3px var(--accent-color);
+  cursor: pointer;
+  font-size: medium;
+  border-radius: 10px;
+  font-weight: 500;
+  margin: 5px 5px;
+  width: 150px;
+  padding: 10px 0;
+  box-shadow: 0 0 3px var(--accent-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -245,18 +245,17 @@
   }
 
   .current::after {
-      position: absolute;
-      display: flex;
-      content: "";
-      width: 100%;
-      height: 1px;
-      background-color: var(--accent-color);
-      transform: translate(0, 8px);
-    }
-    
+    position: absolute;
+    display: flex;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: var(--accent-color);
+    transform: translate(0, 8px);
+  }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .header-logo {
     margin-right: 102px;
     padding-top: 32px;
