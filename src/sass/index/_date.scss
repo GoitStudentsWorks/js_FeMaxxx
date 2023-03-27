@@ -30,8 +30,6 @@
 
   @media screen and (min-width: 1280px) {
     display: inline;
-    font-family: "Manrope";
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.38;
@@ -50,6 +48,7 @@
 }
 
 .calendar-input {
+  cursor: pointer;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -64,8 +63,6 @@
 
   text-align: center;
 
-  font-family: "Manrope";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.75;
@@ -112,6 +109,7 @@
 }
 
 .calendar__button-arrow {
+  cursor: pointer;
   margin-left: 12px;
   display: flex;
   position: absolute;
@@ -175,8 +173,6 @@
 }
 
 .current-date {
-  font-family: "Manrope";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.38;
@@ -221,8 +217,6 @@
   width: calc(100% / 7);
   font-size: 1.07rem;
   margin-bottom: 14px;
-  font-family: "Manrope";
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
@@ -231,8 +225,6 @@
 }
 
 .calendar .days li {
-  font-family: "Manrope";
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.79;
