@@ -6,6 +6,7 @@ import { btnLike } from "./btn-favorite";
 import { btnRead } from "./btn-read";
 import { renderByWidth } from "./window-width";
 import { checkLokalStorage } from "./check-local-storage";
+const weatherContainer = document.querySelector(".weather_container");
 
 const undefinedImages = document.querySelector(".undefined");
 
@@ -122,6 +123,7 @@ function renderImageList(card) {
     })
     .join("");
   gallery.innerHTML = markup;
+  weatherContainer.style.display = "block";
 
   btnLike(newArray);
   btnRead(newArray);
