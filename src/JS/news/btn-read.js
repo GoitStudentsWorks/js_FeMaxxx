@@ -1,38 +1,22 @@
 export function btnRead(newArray) {
   const readCards = [];
   const btnRead = document.querySelectorAll(".card-news__link");
-  const iconRead = document.querySelector(".card-news__read");
-  const opacity = document.querySelector(".card-news__img");
+  const iconRead = document.querySelectorAll(".card-news__read");
+  const img = document.querySelectorAll(".card-news__img");
 
   btnRead.forEach((btn, index) => {
     let isRead = false; // начальное значение
 
-    btn.addEventListener("visibilitychange", function () {
-      if (document.hidden) {
-        // пользователь перешел на другую вкладку
-        //   console.log("Пользователь перешел на другую вкладку");
-        return;
-      } else {
-        // пользователь вернулся на страницу
-        //   console.log("Пользователь вернулся на страницу");
-        opacity[index].classList.add("opacity");
+    btn.addEventListener("click", () => {
+      if (!isRead) {
         iconRead[index].classList.remove("hidden");
-        btn.classList.add("opacity");
+        img[index].classList.add("opacity");
         isRead = true; // обновить значение
+      } else {
+        img[index].classList.remove("opacity");
+        isRead = false; // обновить значение
       }
     });
-
-    // btn.addEventListener("click", () => {
-    //   if (!isRead) {
-    //     opacity.classList.add("opacity");
-    //     iconRead.classList.remove("hidden");
-    //     isRead = true; // обновить значение
-    //   } else {
-    //     opacity[index].classList.remove("opacity");
-    //     iconRead[index].classList.remove("hidden");
-    //     isRead = false; // обновить значение
-    //   }
-    // });
   });
 
   btnRead.forEach((btn, index) => {
@@ -40,14 +24,17 @@ export function btnRead(newArray) {
     btn.addEventListener("click", () => {
       if (!isRead) {
         // Добавляем информацию о карточке в массив
-        readCards.push({
-          headline: newArray[index].headline,
-          abstract: newArray[index].abstract,
-          category: newArray[index].category,
-          pub_date: newArray[index].pub_date,
-          photo: newArray[index].photo,
-          url: newArray[index].url,
-        });
+        readCards.push(
+          addReadMore(newArray[index])
+          //     {
+          //   headline: newArray[index].headline,
+          //   abstract: newArray[index].abstract,
+          //   category: newArray[index].category,
+          //   pub_date: newArray[index].pub_date,
+          //   photo: newArray[index].photo,
+          //   url: newArray[index].url,
+          // }
+        );
         // Обновляем локальное хранилище
         localStorage.setItem("readCards", JSON.stringify(readCards));
         isRead = true;
@@ -65,6 +52,57 @@ export function btnRead(newArray) {
       }
     });
   });
-  console.log(readCards);
+  //   console.log(readCards);
   return readCards;
+}
+
+const cardNews = document.querySelector(".card-news");
+cardNews.addEventListener("click", linkReadMore);
+
+let readMoreId = [];
+isLocalEmpty();
+
+function isLocalEmpty() {
+  if (JSON.parse(localStorage.getItem("readCards")) === null) {
+    return;
+  }
+  readMoreId = JSON.parse(localStorage.getItem("readCards"));
+}
+
+function linkReadMore(event) {
+  const readMore = event.target.closest(`.card-news__link`);
+  if (!readMore) return;
+  addReadMore(readMore);
+}
+
+function addReadMore(readMore) {
+  const evenDateNow = new Date();
+  const options = { year: "numeric", month: "numeric", day: "numeric" };
+  const readDateNow = evenDateNow
+    .toLocaleDateString([], options)
+    .replaceAll(".", "/");
+  const read = {
+    headline:
+      readMore.parentNode.previousElementSibling.firstElementChild.innerText,
+    abstract:
+      readMore.parentNode.previousElementSibling.lastElementChild.innerText,
+    category:
+      readMore.parentNode.previousElementSibling.previousElementSibling
+        .previousElementSibling.previousElementSibling.innerHTML,
+    pub_date: readMore.previousElementSibling.innerText,
+    photo:
+      readMore.parentNode.previousElementSibling.previousElementSibling
+        .previousElementSibling.previousElementSibling.previousElementSibling
+        .currentSrc,
+    url: readMore.href,
+
+    dayRead: readDateNow,
+  };
+  for (let i = 0; i < readMoreId.length; i += 1) {
+    if (readMoreId[i].url === read.url) {
+      return;
+    }
+  }
+  readMoreId.push(read);
+  localStorage.setItem(`readCards`, JSON.stringify(readMoreId));
 }

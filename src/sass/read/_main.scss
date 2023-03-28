@@ -3,74 +3,20 @@
   position: absolute;
 }
 
-.spoiler_wrap {
-  position: relative;
-  margin-bottom: 20px;
-  font-size: 22px;
-  border-radius: 5px;
-  height: fit-content;
-}
-
-.spoiler_title {
-  cursor: pointer;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-
-  letter-spacing: 0.02em;
-
-  color: #111321;
-}
-
-.spoiler_content {
-  padding-bottom: 10px;
-  transition: 0.15s ease-out;
-  height: auto;
-  max-height: 0px;
-  overflow: hidden;
-  margin-top: -10px;
-  opacity: 0;
-  font-size: 14px;
-  color: #444;
-}
-
-.spoiler_content.open {
-  margin-top: 0;
-  max-height: 100%;
-  opacity: 1;
-}
-
-.spoiler_title .spoiler_arrow {
-  display: inline-block;
-  margin-left: 8px;
-  margin-right: 8px;
-  font-size: 20px;
-  transition: all 0.1s;
-  vertical-align: middle;
-  margin-bottom: 8px;
-}
-
-.spoiler_title .spoiler_arrow svg {
-  fill: #111321;
-}
-.spoiler_title .spoiler_arrow.open {
-  transform: rotate(180deg);
-  margin-bottom: 0;
-}
-
 .date-list {
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding-top: 2px;
+  // padding-bottom: 40px;
 }
 .date-list-search {
-  display: flex;
+  // display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  padding-top: 40px;
+  // padding-top: 40px;
   padding-bottom: 40px;
 }
 .date-list__btn {
+  background-color: var(--light-bg-color);
+
   display: flex;
   align-items: start;
   width: 100%;
@@ -79,7 +25,6 @@
   margin-top: 30px;
   margin-bottom: 20px;
 
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -93,11 +38,11 @@
   display: flex;
   padding-top: 8px;
 }
+.turn {
+  transform: rotate(180deg);
+  margin-top: 16px;
+  margin-left: 15px;
+}
 .date-list__btn-text {
   margin-right: 8px;
-}
-.date-list__btn-icon {
-  &.turn {
-    transform: rotate(180deg);
-  }
 }

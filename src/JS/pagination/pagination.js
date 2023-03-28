@@ -17,10 +17,10 @@ num5.innerHTML = 20;
 let btn = null;
 let number = 1;
 const changer = 3;
-if (changer) {
-  num5.classList.add("hidden");
-  dots[1].classList.add("hidden");
-}
+// if (changer) {
+//   num5.classList.add("hidden");
+//   dots[1].classList.add("hidden");
+// }
 const mql = window.matchMedia("(max-width: 320px)");
 let mobileNum = document.querySelector(".mobile-num");
 
@@ -30,32 +30,32 @@ nums.addEventListener("click", e => {
   btn.classList.add("active");
   number = Number(btn.innerHTML);
   mobileNum.innerHTML = number;
-  if (number > changer) {
-    if (number === 1) {
-      num1.classList.add("hidden");
-      num2.classList.add("active");
-      num2.innerHTML = 1;
-      num3.innerHTML = 2;
-      num4.innerHTML = 3;
-      num4.classList.remove("hidden");
-      num4.classList.remove("active");
-      num5.classList.remove("hidden");
-      num5.classList.remove("active");
-      dots[0].classList.add("hidden");
-      dots[1].classList.remove("hidden");
-    }
-    if (number === 20) {
-      num1.classList.remove("hidden");
-      num2.innerHTML = 19;
-      num3.innerHTML = 20;
-      num3.classList.add("active");
-      num2.classList.remove("active");
-      dots[0].classList.remove("hidden");
-      dots[1].classList.add("hidden");
-      num4.classList.add("hidden");
-      num5.classList.add("hidden");
-    }
+  // if (number > changer) {
+  if (number === 1) {
+    num1.classList.add("hidden");
+    num2.classList.add("active");
+    num2.innerHTML = 1;
+    num3.innerHTML = 2;
+    num4.innerHTML = 3;
+    num4.classList.remove("hidden");
+    num4.classList.remove("active");
+    num5.classList.remove("hidden");
+    num5.classList.remove("active");
+    dots[0].classList.add("hidden");
+    dots[1].classList.remove("hidden");
   }
+  if (number === 20) {
+    num1.classList.remove("hidden");
+    num2.innerHTML = 19;
+    num3.innerHTML = 20;
+    num3.classList.add("active");
+    num2.classList.remove("active");
+    dots[0].classList.remove("hidden");
+    dots[1].classList.add("hidden");
+    num4.classList.add("hidden");
+    num5.classList.add("hidden");
+  }
+  // }
 
   if (
     mobileNum.innerHTML === 1 &&
@@ -197,7 +197,7 @@ function prewDisabled() {
   }
 }
 function nextDisabled() {
-  if (number > 2) {
+  if (number > 19) {
     next.setAttribute("disabled", true);
   } else {
     next.removeAttribute("disabled");
