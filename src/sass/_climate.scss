@@ -1,4 +1,13 @@
+.index-main-container {
+  position: relative;
+}
+
 .weather_container {
+  position: absolute;
+  right: 16px;
+  top: 0px;
+  z-index: 50;
+
   width: 288px;
   height: 469px;
   background-color: var(--accent-color);
@@ -12,7 +21,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    width: 395px;
+    width: 400px;
     height: 675px;
     padding: 45px 53px 130px 53px;
   }
