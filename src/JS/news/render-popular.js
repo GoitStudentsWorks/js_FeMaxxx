@@ -2,7 +2,6 @@ import { getNews } from "./fetch-news-popular";
 import { btnLike } from "./btn-favorite";
 import { btnRead } from "./btn-read";
 import { renderByWidth } from "./window-width";
-import { markupOfCard } from "./markup-of-card";
 import { checkLokalStorage } from "./check-local-storage";
 
 const newsCard = document.querySelector(".card-news");
@@ -14,7 +13,6 @@ export function renderImageList(card) {
   const length = card.length;
   const numberOfCards = renderByWidth(length);
   const firstRender = card.splice(0, numberOfCards);
-  //   funcExp(lenght, card.splice(numberOfCards));
 
   const markup = firstRender
     .map(card => {
@@ -56,7 +54,6 @@ export function renderImageList(card) {
         url: card.url,
       };
       newArray.push(array);
-      //   return markupOfCard(array);
       return `<li class="card-news__item ">
     <img class="card-news__img ${opacity}" src="${array.photo}" alt="" loading="lazy" />
     <span class="card-news__categories">${array.category}</span>

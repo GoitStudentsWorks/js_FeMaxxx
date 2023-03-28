@@ -7,6 +7,7 @@ icon.addEventListener("click", showInput);
 window.addEventListener("resize", checkSize);
 checkSize();
 let searchQuery = "";
+const axios = require("axios").default;
 
 export async function fetchArticles() {
   const BASE_URL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";

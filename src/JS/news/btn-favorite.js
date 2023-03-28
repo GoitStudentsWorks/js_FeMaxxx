@@ -39,79 +39,18 @@ export function btnLike(newArray) {
         // Обновляем локальное хранилище
         localStorage.setItem("favoriteCards", JSON.stringify(favoriteCards));
         isFavorite = true;
+      } else {
+        // Удаляем информацию о карточке из массива
+        const cardIndex = favoriteCards.findIndex(
+          card => card.headline === newArray[index].headline
+        );
+        // if (cardIndex !== -1) {
+        //   favoriteCards.splice(cardIndex, 1);
+        //   // Обновляем локальное хранилище
+        //   localStorage.setItem("favoriteCards", JSON.stringify(favoriteCards));
+        // }
+        isFavorite = false;
       }
-      //   else {
-      //     // Удаляем информацию о карточке из массива
-      //     const cardIndex = favoriteCards.findIndex(
-      //       card => card.headline === newArray[index].headline
-      //     );
-      //     if (cardIndex !== -1) {
-      //       favoriteCards.splice(cardIndex, 1);
-      //       // Обновляем локальное хранилище
-      //       localStorage.setItem("favoriteCards", JSON.stringify(favoriteCards));
-      //     }
-      //     isFavorite = false;
-      //     // console.log(favoriteCards);
-      //   }
-      //   console.log(favoriteCards);
     });
-    // console.log(favoriteCards);
   });
 }
-
-// const newsList = document.querySelector(".card-news");
-
-// newsList.addEventListener("click", btnAddToFavorite);
-// let newLocalStorage = [];
-
-// function isLocalEmpty() {
-//   if (JSON.parse(localStorage.getItem("favoriteCards")) === null) {
-//     newLocalStorage = [];
-//     return;
-//   }
-//   newLocalStorage = JSON.parse(localStorage.getItem("favoriteCards"));
-// }
-// isLocalEmpty();
-
-// function btnAddToFavorite(event) {
-//   const btn = event.target.closest(".card-news__btn-like");
-//   if (!btn) return;
-//   isLocalEmpty();
-//   let url =
-//     btn.parentNode.nextElementSibling.nextElementSibling.lastElementChild
-//       .textContent;
-//   if (!btn.classList.contains("favorite")) {
-//     btn.classList.add("favorite");
-//     addToFavoriteLocal(btn);
-//     return;
-//   }
-//   btn.classList.remove("favorite");
-//   for (let i = 0; i < newLocalStorage.length; i += 1) {
-//     if (newLocalStorage[i].url === url) {
-//       newLocalStorage.splice(i, 1);
-//     }
-//   }
-//   localStorage.setItem(`favoriteCards`, JSON.stringify(newLocalStorage));
-// }
-
-// function addToFavoriteLocal(btn) {
-//   const favoriteCard = {
-//     id: btn.parentNode.parentNode.id,
-//     img: btn.parentNode.childNodes[1].attributes.src.nodeValue,
-//     category: btn.parentNode.childNodes[3].innerText,
-//     title: btn.parentNode.parentNode.childNodes[3].children[0].innerText,
-//     description: btn.parentNode.parentNode.childNodes[3].children[1].innerText,
-//     date: btn.parentNode.parentNode.lastElementChild.children[0].innerText,
-//     link: btn.parentNode.parentNode.lastElementChild.children[1].attributes[2]
-//       .value,
-//     favorite: "true",
-//     url: btn.parentNode.nextElementSibling.nextElementSibling.lastElementChild
-//       .textContent,
-//   };
-//   for (let i = 0; i < newLocalStorage.length; i += 1) {
-//     if (newLocalStorage[i].url === favoriteCard.url) return;
-//   }
-
-//   newLocalStorage.push(favoriteCards);
-//   localStorage.setItem(`favoriteCards`, JSON.stringify(newLocalStorage));
-// }
