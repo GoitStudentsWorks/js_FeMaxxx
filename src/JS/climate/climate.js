@@ -41,7 +41,7 @@ console.log(weatherContainer);
 const newsCard = document.querySelector(`.card-news`);
 console.log(newsCard);
 // indexContainer.insertBefore(weatherContainer, newsCard[2].nextSibling);
-const targetElement = newsCard[0];
+const targetElement = newsCard[2];
 console.log(targetElement);
 // вставляем контейнер погоды перед целевым элементом
 indexContainer.insertBefore(weatherContainer, targetElement);
