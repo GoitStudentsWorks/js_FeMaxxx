@@ -24,11 +24,11 @@
       <form class="search-form">
         <input class="search-input" type="text" placeholder="Search" />
         <div search-icon>
-          <button type="button" class="open-input">
+          <button type="submit" class="open-input"></button>
             <svg class="search-icon__svg" width="20" height="20">
               <use href="/src/images/sprite.svg#search"></use>
             </svg>
-          </button>
+          
         </div>
       </form>
 
@@ -36,14 +36,18 @@
         <svg class="theme-icon__sun" width="20" height="20">
           <use href="./images/sprite.svg#sun"></use>
         </svg>
-
-        <label class="switch">
-          <input class="checkbox" type="checkbox" />
-          <span class="slider round"></span>
-        </label>
+        <p class="theme-icon-light">Light</p>
+    
+        <div class="switch">
+          <span class="checkbox"></span>
+    
+          <span class="slider"></span>
+          
+        </div>
         <svg class="theme-icon__moon" width="20" height="20">
           <use href="./images/sprite.svg#moon"></use>
         </svg>
+        <p class="theme-icon-dark">Dark</p>
       </div>
     </div>
 
@@ -123,6 +127,21 @@
           </a>
         </li>
       </ul>
+      <div class="mob-theme" >
+        <svg class="theme-icon__sun" width="20" height="20">
+          <use href="./images/sprite.svg#sun"></use>
+        </svg>
+    
+        <div class="mob-switch">
+          <span class="mob-checkbox"></span>
+    
+          <span class="mob-slider"></span>
+          
+        </div>
+        <svg class="theme-icon__moon" width="20" height="20">
+          <use href="./images/sprite.svg#moon"></use>
+        </svg>
+      </div>
     </div>
 
     <div class="switcher"></div>

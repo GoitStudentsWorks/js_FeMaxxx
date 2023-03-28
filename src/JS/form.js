@@ -1,11 +1,11 @@
-import axios from "axios";
 const searchInput = document.querySelector(".search-input");
 const openBtn = document.querySelector(".open-input");
 const icon = document.querySelector(".search-icon__svg");
 const form = document.querySelector(".search-form");
-openBtn.addEventListener("click", showInput);
-window.addEventListener('resize', checkSize)
-checkSize()
+openBtn.addEventListener("submit", onSearch);
+icon.addEventListener("click", showInput);
+window.addEventListener("resize", checkSize);
+checkSize();
 let searchQuery = "";
 
 export async function fetchArticles() {
@@ -34,25 +34,16 @@ async function onSearch(e) {
   await fetchArticles(searchQuery);
 }
 
- function showInput() {
-    
-    icon.classList.add('active')
-   
-    searchInput.classList.remove('visually-hidden')
-   
-}
-if(showInput){
-    // openBtn.removeAttribute('type', 'button')
-    openBtn.setAttribute('type', 'submit')
+function checkSize() {
+  if (document.documentElement.clientWidth < 768) {
+    searchInput.classList.add("visually-hidden");
+    window.removeEventListener("resize", checkSize);
+  } else {
+    searchInput.classList.remove("visually-hidden");
+  }
 }
 
-function checkSize(){
-
-    if(document.documentElement.clientWidth < 768){
-        searchInput.classList.add('visually-hidden')
-       }
-        else{
-           searchInput.classList.remove('visually-hidden')
-        }
-       
+function showInput() {
+  searchInput.classList.remove("visually-hidden");
+  icon.classList.add("search-icon__active");
 }

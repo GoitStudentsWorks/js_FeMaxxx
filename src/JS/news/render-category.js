@@ -7,6 +7,8 @@ import { btnRead } from "./btn-read";
 import { renderByWidth } from "./window-width";
 import { markupOfCard } from "./markup-of-card";
 
+const undefinedImages = document.querySelector(".undefined");
+
 buttonsContainer.addEventListener("click", choiceFilter);
 
 function choiceFilter(e) {
@@ -24,7 +26,9 @@ function proccesImageCreate(foundData) {
     Notiflix.Notify.failure(
       "Sorry, there are no images matching your search query. Please try again."
     );
+    undefinedImages.style.display = "block";
   } else {
+    undefinedImages.style.display = "none";
     renderImageList(createCard);
   }
 }
