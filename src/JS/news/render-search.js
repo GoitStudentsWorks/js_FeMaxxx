@@ -15,16 +15,16 @@ form.addEventListener("submit", onBtnCreate);
 function onBtnCreate(event) {
   event.preventDefault();
   const searchFormInput = input.value.trim();
-  console.log(searchFormInput);
+
   if (!searchFormInput) {
     return;
   }
-  fetchImages(searchFormInput, 2).then(proccesImageCreate);
+  fetchImages(searchFormInput, 0).then(proccesImageCreate);
 }
 
 function proccesImageCreate(foundData) {
-  console.log(foundData);
   const createCard = foundData.response.docs;
+
   if (!createCard.length) {
     Notiflix.Notify.failure(
       "Sorry, there are no images matching your search query. Please try again."
@@ -62,6 +62,7 @@ function renderImageList(card) {
           : "https://img.freepik.com/free-vector/internet-network-warning-404-error-page-or-file-not-found-for-web-page_1150-48326.jpg?w=996&t=st=1676297842~exp=1676298442~hmac=6cad659e6a3076ffcb73bbb246c4f7e5e1bf7cee7fa095d67fcced0a51c2405c",
         url: card.web_url,
       };
+
       newArray.push(array);
 
       return `<li class="card-news__item">

@@ -25,15 +25,18 @@
 
 .search-input {
   display: block;
-  transition: 0.5s;
+  // transition: var(--animation);
   width: 100%;
   border-radius: 20px;
   position: relative;
   border: 1px solid #111321;
-
+  outline: none;
   font-size: 14px;
   height: 31px;
   padding: 5px 0 5px 40px;
+  :focus {
+    display: block;
+  }
 }
 
 .search-form {
@@ -61,4 +64,16 @@
   top: 0;
   bottom: 0;
   margin: auto 0;
+}
+.open-input {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+
+  z-index: 1;
 }
