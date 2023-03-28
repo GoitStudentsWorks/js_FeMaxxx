@@ -109,3 +109,29 @@
   font-size: 16px;
   line-height: 22px;
 }
+.favorite {
+  .card-news__add-to-favorite-btn {
+    content: "Remove from favorite";
+  }
+  .card-news__icon-like {
+    fill: var(--color1, #4440f7);
+  }
+}
+.opacity {
+  opacity: 0.5;
+}
+.card-news__read {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 20px;
+  left: 280px;
+  color: #00dd73;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+.icon-read {
+  margin-left: 5px;
+}

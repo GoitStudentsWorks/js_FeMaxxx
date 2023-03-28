@@ -1,6 +1,6 @@
 // import * as pop from "./pag-popular";
 export { num2, num3, num4 };
-const ul = document.querySelector(".pagination");
+// const ul = document.querySelector(".pagination");
 const prew = document.querySelector(".prew");
 prew.setAttribute("disabled", true);
 const next = document.querySelector(".next");

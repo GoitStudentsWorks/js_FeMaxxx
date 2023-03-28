@@ -1,14 +1,7 @@
 <header class="header">
   <div class="container header__container">
     <nav class="header__navigation">
-      <a
-        class="header-logo link"
-        id="logo"
-        href="/src/index.html"
-        rel="home"
-        lang="en"
-        >News
-      </a>
+      <a class="header-logo" id="logo" href="/src/index.html">News </a>
 
       <ul class="header-list">
         <li class="header-list__item">
@@ -27,19 +20,34 @@
       </ul>
     </nav>
 
+    <div class="form-theme">
+      <form class="search-form">
+        <input class="search-input" type="text" placeholder="Search" />
+        <div search-icon>
+          <button type="button" class="open-input">
+            <svg class="search-icon__svg" width="20" height="20">
+              <use href="/src/images/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </form>
+
+      <div class="theme">
+        <svg class="theme-icon__sun" width="20" height="20">
+          <use href="./images/sprite.svg#sun"></use>
+        </svg>
+
+        <label class="switch">
+          <input class="checkbox" type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+        <svg class="theme-icon__moon" width="20" height="20">
+          <use href="./images/sprite.svg#moon"></use>
+        </svg>
+      </div>
+    </div>
+
     <div class="btn-container">
-      <button type="button" class="open-search-input" data-input-open>
-        <svg class="icon-open-input" width="18" height="18">
-          <use href="/src/images/sprite.svg#search"></use>
-        </svg>
-      </button>
-
-      <button type="button" class="open-login-form" data-login-form-open>
-        <svg class="icon-open-login-form" width="18" height="18">
-          <use href="/src/images/sprite.svg#login"></use>
-        </svg>
-      </button>
-
       <button type="button" class="open-mob-menu" data-menu-open>
         <svg class="icon-open-mob-menu" width="20" height="20">
           <use href="/src/images/sprite.svg#burger"></use>
@@ -56,8 +64,6 @@
         class="header-logo link header-logo-mob"
         id="logo"
         href="/src/index.html"
-        rel="home"
-        lang="en"
         >News
       </a>
 
@@ -68,7 +74,7 @@
       </button>
 
       <ul class="mob-menu-list">
-        <li class="mob-menu__item">
+        <li class="mob-menu__item active-item">
           <div class="icon-home">
             <svg class="icon-home-svg" width="15" height="15">
               <use href="/src/images/sprite.svg#home"></use>
@@ -83,7 +89,7 @@
           </a>
         </li>
 
-        <li class="mob-menu__item active-item">
+        <li class="mob-menu__item">
           <div class="icon-home">
             <svg class="icon-home-svg" width="15" height="15">
               <use href="/src/images/sprite.svg#favorite-heart"></use>
@@ -118,12 +124,7 @@
         </li>
       </ul>
     </div>
-    <div class="container-login">
-      <div>
-        <button class="log log-reg-button">Login</button>
-        <button class="reg log-reg-button">Sign up</button>
-      </div>
-      <div class="switcher"></div>
-    </div>
+
+    <div class="switcher"></div>
   </div>
 </div>

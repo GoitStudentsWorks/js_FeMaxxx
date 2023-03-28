@@ -29,15 +29,6 @@ function proccesImageCreate(foundData) {
     Notiflix.Notify.failure(
       "Sorry, there are no images matching your search query. Please try again."
     );
-    newsCard.style.display = "block";
-    const undefined = `<div class='undefined'>
-    <h1 class='undefined-title'>We haven't found news from this category</h1>
-    <picture class='undefined-picture'>
-    <source srcset='./images/mobile-standard-picture.png' type='image/png' media='(max-width: 479.98px)'alt='undefined-picture'/>
-    <source srcset='./images/tablet-standard-picture.png' type='image/png' media='(max-width:767.98px)' alt='undefined-picture'/>
-    <source srcset='./images/desk-standard-picture.png' type='image/png' media='(min-width: 1279.98px)'alt='undefined-picture'/>
-    <img src='./images/mobile-standard-picture.png' alt='undefined-picture' width='248' height='198'/></picture></div>`;
-    return (newsCard.innerHTML = undefined);
   } else {
     renderImageList(createCard);
   }

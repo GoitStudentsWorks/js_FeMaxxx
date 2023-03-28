@@ -1,8 +1,8 @@
 export function markupOfCard(array) {
-  return `<li class="card-news__item">
+  return `<li class="card-news__item ${opacity}">
 <img class="card-news__img" src="${array.photo}" alt="" loading="lazy" />
 <span class="card-news__categories">${array.category}</span>
-<button class="card-news__btn-like">
+<button class="card-news__btn-like ${hiddenSpan}">
   <span class="card-news__add-to-favorite-btn"
     >Add to favorite
   </span>
