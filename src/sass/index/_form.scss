@@ -14,14 +14,6 @@
   }
 }
 
-.theme-icon__sun {
-  fill: transparent;
-  stroke: #4b48db;
-}
-.theme-icon__moon {
-  fill: transparent;
-  stroke: #5f6775;
-}
 
 .search-input {
   display: block;
@@ -34,9 +26,6 @@
   font-size: 14px;
   height: 31px;
   padding: 5px 0 5px 40px;
-  :focus {
-    display: block;
-  }
 }
 
 .search-form {
