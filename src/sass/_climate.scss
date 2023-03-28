@@ -1,12 +1,12 @@
-.index-main-container {
-  position: relative;
-}
+// .index-main-container {
+//   // position: relative;
+// }
 
 .weather_container {
-  position: absolute;
-  right: 16px;
-  top: 0px;
-  z-index: 50;
+  // position: absolute;
+  // right: 16px;
+  // top: 0px;
+  // z-index: 50;
 
   width: 288px;
   height: 469px;
@@ -282,7 +282,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
-  line-height: 1.18;
+  line-height: 1.17;
 
   @media screen and (min-width: 768px) {
     font-size: 36px;
