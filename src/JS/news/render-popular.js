@@ -20,7 +20,7 @@ export function renderImageList(card) {
       let hidden = "hidden";
       let localArr = JSON.parse(localStorage.getItem("readCards"));
       let check = checkLokalStorage(card, localArr);
-      if (check === true) {
+      if (check) {
         opacity = "opacity";
         hidden = "";
       }
@@ -28,7 +28,7 @@ export function renderImageList(card) {
       let hiddenSpan = "";
       let localFavorite = JSON.parse(localStorage.getItem("favoriteCards"));
       let checkFavorite = checkLokalStorage(card, localFavorite);
-      if (checkFavorite === true) {
+      if (checkFavorite) {
         hiddenSpan = "favorite";
         spanAdd = "Remove from favorite";
       } else {
@@ -36,7 +36,8 @@ export function renderImageList(card) {
       }
 
       const array = {
-        headline: card.title,
+        headline:
+          card.title.length > 50 ? card.title.slice(0, 50) + "..." : card.title,
         abstract:
           card.abstract.length > 100
             ? card.abstract.slice(0, 100) + "..."

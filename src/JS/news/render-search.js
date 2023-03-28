@@ -65,7 +65,10 @@ function renderImageList(card) {
         spanAdd = "Add to favorite";
       }
       const array = {
-        headline: card.headline.main,
+        headline:
+          card.headline.main.length > 50
+            ? card.headline.main.slice(0, 50) + "..."
+            : card.headline.main,
         abstract:
           card.abstract.length > 100
             ? card.abstract.slice(0, 100) + "..."

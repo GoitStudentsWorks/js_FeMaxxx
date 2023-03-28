@@ -60,7 +60,8 @@ function renderImageList(card) {
       }
 
       const array = {
-        headline: card.title,
+        headline:
+          card.length > 50 ? card.title.slice(0, 50) + "..." : card.title,
         abstract:
           card.abstract.length > 100
             ? card.abstract.slice(0, 100) + "..."
