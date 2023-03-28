@@ -1,6 +1,7 @@
 const searchInput = document.querySelector(".search-input");
 const openBtn = document.querySelector(".open-input");
-const icon = document.querySelector(".search-icon__svg"); // const form = document.querySelector(".search-form");
+const icon = document.querySelector(".search-icon__svg");
+const form = document.querySelector(".search-form");
 openBtn.addEventListener("submit", onSearch);
 icon.addEventListener("click", showInput);
 window.addEventListener("resize", checkSize);
