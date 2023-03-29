@@ -35,6 +35,7 @@ color: #5F6775;
 }
 .light-theme {
   background-color: #f4f4f4;
+  transition: var(--animation);
 }
 
 .dark-theme {
@@ -58,16 +59,22 @@ color: #5F6775;
       background-color: #2e2e2e;
     }
   
-    .link, .icon-right-arrow, .header-list__item,  .header-logo {
+    .link, .header-list__item,  .header-logo {
       color: #f4f4f4;
     }
   .icon-open-mob-menu, .icon-close-mob-menu {
     stroke: #f4f4f4;
   }
-  .open-login-form {
-    fill: #f4f4f4;
-  }
   
+  .open-login-form  {
+    fill: #f4f4f4;
+  
+  }
+
+  .icon-right-arrow{
+fill:  var(--light-text-color)
+  }
+
   .theme-icon__sun {
     stroke: #5f6775;
   }
