@@ -5,17 +5,17 @@ import { btnRead } from "./btn-read";
 import { renderByWidth } from "./window-width";
 import { checkLokalStorage } from "./check-local-storage";
 
-export {
-  input,
-  form,
-  searchFormInput,
-  newsCard,
-  undefinedImages,
-  weatherContainer,
-  proccesImageCreate,
-  renderImageList,
-  onBtnCreate,
-};
+// export {
+//   input,
+//   form,
+//   searchFormInput,
+//   newsCard,
+//   undefinedImages,
+//   weatherContainer,
+//   proccesImageCreate,
+//   renderImageList,
+//   onBtnCreate,
+// };
 
 const input = document.querySelector(".search-input");
 // const btnSearch = document.querySelector(".open-input");
@@ -23,7 +23,6 @@ const form = document.querySelector(".search-form");
 const newsCard = document.querySelector(".card-news");
 const undefinedImages = document.querySelector(".undefined");
 const weatherContainer = document.querySelector(".weather_container");
-const searchFormInput = input.value.trim();
 const loader = document.querySelector(".loader");
 const pagination = document.querySelector(".pagination");
 
@@ -37,7 +36,7 @@ setTimeout(() => {
 
 function onBtnCreate(event) {
   event.preventDefault();
-
+  const searchFormInput = input.value.trim();
   if (!searchFormInput) {
     return;
   }
@@ -51,7 +50,6 @@ function proccesImageCreate(foundData) {
     Notiflix.Notify.failure(
       "Sorry, there are no images matching your search query. Please try again."
     );
-    // newsCard.style.display = "block";
     newsCard.innerHTML = "";
     undefinedImages.style.display = "block";
     weatherContainer.style.display = "none";
@@ -82,7 +80,7 @@ function renderImageList(card) {
       let hiddenSpan = "";
       let localFavorite = JSON.parse(localStorage.getItem("favoriteCards"));
       let checkFavorite = checkLokalStorage(card, localFavorite);
-      if (!checkFavorite) {
+      if (checkFavorite) {
         hiddenSpan = "favorite";
         spanAdd = "Remove from favorite";
       } else {
