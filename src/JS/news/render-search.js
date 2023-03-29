@@ -10,6 +10,7 @@ const input = document.querySelector(".search-input");
 const form = document.querySelector(".search-form");
 const newsCard = document.querySelector(".card-news");
 const undefinedImages = document.querySelector(".undefined");
+const weatherContainer = document.querySelector(".weather_container");
 
 form.addEventListener("submit", onBtnCreate);
 
@@ -33,8 +34,11 @@ function proccesImageCreate(foundData) {
     // newsCard.style.display = "block";
     newsCard.innerHTML = "";
     undefinedImages.style.display = "block";
+    weatherContainer.style.display = "none";
   } else {
     undefinedImages.style.display = "none";
+    weatherContainer.style.display = "block";
+
     renderImageList(createCard);
   }
 }

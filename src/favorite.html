@@ -6,18 +6,23 @@
 
     <link rel="stylesheet" href="./sass/index.scss" />
 
-    <script type="module" src="./JS/news/favorite.js"></script>
-    <script type="module" src="./JS/form.js"></script>
-    <script type="module" src="./JS/header.js"></script>
-    <script type="module" src="./JS/theme.js"></script>
+  
 
     <title>News</title>
   </head>
   <body>
-    <include src="./partials/favorite/header.html"></include>
-    <include src="./partials/favorite/main.html"></include>
-    <include src="./partials/footer.html"></include>
+    <div class="wrapper">
+      <div class="content">
+        <include src="./partials/favorite/header.html"></include>
+        <include src="./partials/favorite/main.html"></include>
+      </div>
+      <include src="./partials/footer.html"></include>
+    </div>
 
     <include src="./partials/modal.html"></include>
+    <script type="module" src="./JS/news/favorite.js"></script>
+    <script type="module" src="./JS/form.js"></script>
+    <script src="./JS/header.js"></script>
+    <script  src="./JS/theme.js"></script>
   </body>
 </html>

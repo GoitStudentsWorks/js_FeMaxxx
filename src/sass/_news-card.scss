@@ -34,6 +34,7 @@
   align-items: center;
   height: 395px;
   width: auto;
+  object-fit: cover;
 }
 
 .card-news__categories {
@@ -88,6 +89,7 @@
 
 .card-news__text {
   margin-top: 20px;
+  height: 66px;
   left: 1px;
   top: 567px;
   overflow: hidden;
@@ -149,13 +151,17 @@
   position: absolute;
   display: flex;
   align-items: center;
-  top: 20px;
-
+  top: 14px;
+  right: 15px;
   color: #00dd73;
   padding: 4px 8px;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  @media screen and (min-width: 768px) {
+    top: 20px;
+    right: 22px;
+  }
 }
 .icon-read {
   margin-left: 5px;

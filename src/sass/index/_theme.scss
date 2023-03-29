@@ -38,7 +38,7 @@ color: #5F6775;
 }
 
 .dark-theme {
-  transition: 0.5s;
+  transition: var(--animation);
   background-color: #2e2e2e;
   .theme-icon-dark{
  
@@ -50,29 +50,24 @@ color: #5F6775;
     opacity: 0.4;
  
   }
-  .mob-menu {
-    background-color: #2e2e2e;
-  }
 
-  .link {
-    color: #f4f4f4;
-  }
-  .icon-right-arrow {
-    fill: #f4f4f4;
-  }
-
-  .header-list__item {
-    color: #f4f4f4;
-  }
-  .icon-open-mob-menu {
+  .card-news__caption, .card-news__text, .card-news__caption, .card-news__text{
+    color: var(--light-text-color);
+   }
+    .mob-menu {
+      background-color: #2e2e2e;
+    }
+  
+    .link, .icon-right-arrow, .header-list__item,  .header-logo {
+      color: #f4f4f4;
+    }
+  .icon-open-mob-menu, .icon-close-mob-menu {
     stroke: #f4f4f4;
   }
   .open-login-form {
     fill: #f4f4f4;
   }
-  .header-logo {
-    color: #f4f4f4;
-  }
+  
   .theme-icon__sun {
     stroke: #5f6775;
   }
@@ -87,9 +82,10 @@ color: #5F6775;
     border: 1px solid rgba(244, 244, 244, 0.2);
     background-color: #2e2e2e;
     color: #f4f4f4;
-    ::placeholder {
-      color: #f4f4f4;
+    &::placeholder {
+      color: #F4F4F4;
       opacity: 0.4;
+ 
     }
   }
 }
@@ -140,7 +136,7 @@ color: #5F6775;
   width: 16px;
   height: 16px;
   background-color: #4b48db;
-  transition: 0.5s;
+  transition: var(--animation);
   border-radius: 20px;
 }
 
@@ -155,7 +151,7 @@ color: #5F6775;
   height: 16px;
   border-radius: 50%;
   background-color: #4b48db;
-  transition: 0.5s;
+  transition: var(--animation);
 }
 .slideractive {
   background-color: #ffff;
@@ -170,7 +166,7 @@ color: #5F6775;
   margin: auto 0;
   width: 16px;
   height: 16px;
-  transition: 0.5s;
+  transition: var(--animation);
 }
 
 .mob-checkbox {
@@ -179,14 +175,13 @@ color: #5F6775;
   height: 20px;
   border-radius: 20px;
   border: 0.604701px solid #4b48db;
-  transition: 0.5s;
+  transition: var(--animation);
 }
 
 .mob-theme {
   display: flex;
   position: fixed;
-  bottom: 0;
-  // flex-grow: 1;
+  bottom: 18;
 }
 
 .mob-switch {
@@ -205,5 +200,5 @@ color: #5F6775;
   height: 20px;
   border-radius: 20px;
   border: 0.604701px solid #ffff;
-  transition: 0.5s;
+ transition: var(--animation);
 }
