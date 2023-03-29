@@ -39,7 +39,7 @@ function markupDateRead(date) {
       return `<li class="date-list__item">
   <button class="date-list__btn"><span class="date-list__btn-text">${key}</span><span class="date-list__btn-block">
   <svg class="date-list__btn-icon" width="14" height="9" aria-hidden="true" style="position: absolute;>
-<symbol id="icon-Vector-2-1" viewBox="0 0 50 32">
+<symbol viewBox="0 0 50 32">
 <path d="M5.867 0l-5.867 6.080 24.889 25.92 24.889-25.92-5.831-6.080-19.058 19.769-19.058-19.769z"></path>
 </symbol>
 </svg></span>
@@ -81,23 +81,7 @@ dateListEl.addEventListener("click", event => {
     listNews.classList.add("hidden");
     iconDate.classList.remove("turn");
   }
-
-  //   function isHiddenItem(arr) {
-  //     arr.filter(list => {
-  //       list.classList.contains("hidden");
-  //     });
-  //   }
-
-  //   if (!isHiddenItem(Array.from(document.querySelectorAll(".list-news")))) {
-  //     const item = document.querySelectorAll(".list-news");
-  //     item.forEach(elem => {
-  //       elem.classList.add("hidden");
-  //       iconDate.classList.toggle("turn");
-  //     });
-  //   }
-
   btn.nextElementSibling.classList.toggle("hidden");
-
   return;
 });
 
@@ -111,12 +95,16 @@ function form(event) {
   let newArrForMarkupSearch = [];
   event.preventDefault();
 
-  if (readInputEl.value.trim() === "") {
+  if (readInputEl.value.trim() !== "") {
     dateListEl.classList.add("hidden");
     undefinedImages.style.display = "block";
     readListSearchEl.classList.add("hidden");
     newArrForMarkupSearch = [];
     return;
+  } else {
+    dateListEl.classList.remove("hidden");
+    undefinedImages.style.display = "none";
+    readListSearchEl.classList.remove("hidden");
   }
 
   const inputValue = readInputEl.value.toLowerCase();

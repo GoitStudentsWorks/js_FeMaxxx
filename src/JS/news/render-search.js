@@ -24,8 +24,16 @@ const newsCard = document.querySelector(".card-news");
 const undefinedImages = document.querySelector(".undefined");
 const weatherContainer = document.querySelector(".weather_container");
 const searchFormInput = input.value.trim();
+const loader = document.querySelector(".loader");
+const pagination = document.querySelector(".pagination");
 
-form.addEventListener("submit", onBtnCreate);
+loader.classList.remove("hidden");
+pagination.classList.add("hidden");
+weatherContainer.style.display = "none";
+
+setTimeout(() => {
+  form.addEventListener("submit", onBtnCreate);
+}, 1000);
 
 function onBtnCreate(event) {
   event.preventDefault();
@@ -147,6 +155,11 @@ function renderImageList(card) {
     })
     .join("");
   newsCard.innerHTML = markup;
+
+  loader.classList.add("hidden");
+  weatherContainer.style.display = "block";
+  pagination.classList.remove("hidden");
+
   btnLike(newArray);
   btnRead(newArray);
 }

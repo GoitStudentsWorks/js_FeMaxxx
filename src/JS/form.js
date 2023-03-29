@@ -12,7 +12,7 @@ const axios = require("axios").default;
 async function fetchArticles() {
   const BASE_URL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
   const params = {
-    "api-key": "zHSQzxiahl4NGmmsXRmy0bUeXAOYuqJ3",
+    "api-key": "h82LSxHnwytWrbBDAaEM0yRoLcpNOT6L",
     q: `${searchQuery}`,
   };
 

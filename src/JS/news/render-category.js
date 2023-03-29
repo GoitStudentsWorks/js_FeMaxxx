@@ -7,10 +7,17 @@ import { btnRead } from "./btn-read";
 import { renderByWidth } from "./window-width";
 import { checkLokalStorage } from "./check-local-storage";
 const weatherContainer = document.querySelector(".weather_container");
-
+const loader = document.querySelector(".loader");
+const pagination = document.querySelector(".pagination");
 const undefinedImages = document.querySelector(".undefined");
 
-buttonsContainer.addEventListener("click", choiceFilter);
+loader.classList.remove("hidden");
+pagination.classList.add("hidden");
+weatherContainer.style.display = "none";
+
+setTimeout(() => {
+  buttonsContainer.addEventListener("click", choiceFilter);
+}, 1000);
 
 function choiceFilter(e) {
   if (e.target.nodeName !== "BUTTON" || e.target.name === "") {
@@ -27,9 +34,12 @@ function proccesImageCreate(foundData) {
     Notiflix.Notify.failure(
       "Sorry, there are no images matching your search query. Please try again."
     );
+    gallery.innerHTML = "";
     undefinedImages.style.display = "block";
+    weatherContainer.style.display = "none";
   } else {
     undefinedImages.style.display = "none";
+    weatherContainer.style.display = "block";
     renderImageList(createCard);
   }
 }
@@ -124,7 +134,10 @@ function renderImageList(card) {
     })
     .join("");
   gallery.innerHTML = markup;
+
+  loader.classList.add("hidden");
   weatherContainer.style.display = "block";
+  pagination.classList.remove("hidden");
 
   btnLike(newArray);
   btnRead(newArray);

@@ -33,7 +33,7 @@ formEl.addEventListener("submit", event => {
     return;
   }
   if (value === "" || value === null) {
-    undefinedImages.style.display = "none";
+    undefinedImages.style.display = "block";
   }
   let markup = createMarkup(hits);
   newList.innerHTML = markup;
@@ -78,7 +78,7 @@ function removeToFavorite(e) {
   const btn = e.target.closest(`.card-news__add-to-favorite-btn`);
   if (!btn) return;
   if (!dataInLocal) {
-    return;
+    undefinedImages.style.display = "block";
   }
   let title = btn.parentNode.nextElementSibling.firstElementChild.textContent;
 
@@ -89,6 +89,7 @@ function removeToFavorite(e) {
   }
   localStorage.setItem(`favoriteCards`, JSON.stringify(dataInLocal));
   btn.parentNode.parentNode.remove();
+  undefinedImages.style.display = "block";
   // location.reload();
 }
 
