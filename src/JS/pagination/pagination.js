@@ -1,5 +1,6 @@
 // import * as pop from "./pag-popular";
 export { num2, num3, num4 };
+
 // const ul = document.querySelector(".pagination");
 const prew = document.querySelector(".prew");
 prew.setAttribute("disabled", true);
@@ -21,7 +22,14 @@ const changer = 3;
 //   num5.classList.add("hidden");
 //   dots[1].classList.add("hidden");
 // }
-const mql = window.matchMedia("(max-width: 320px)");
+const mql = window.matchMedia("(max-width: 767px)");
+const mq = window.matchMedia("(max-width: 419px)");
+if (mq.matches) {
+  (prew.innerHTML =
+    '<svg viewBox="0 0 16 32" width="8" height="12"><path fill="#4440f6" style="fill: var(--color1, #4440f6)" d="M0 16c0 0.596 0.204 1.107 0.642 1.55l12.192 12.982c0.345 0.375 0.784 0.579 1.301 0.579 1.034 0 1.865-0.886 1.865-2.027 0-0.562-0.219-1.056-0.564-1.448l-10.985-11.636 10.985-11.636c0.345-0.392 0.564-0.903 0.564-1.448 0-1.141-0.831-2.027-1.865-2.027-0.517 0-0.956 0.204-1.301 0.579l-12.192 12.965c-0.439 0.46-0.642 0.971-0.642 1.567z"></path></svg>'),
+    (next.innerHTML =
+      '<svg viewBox="0 0 16 32" width="8" height="12" ><path fill="#4440f6" style="fill: var(--color1, #4440f6)" d="M16 16c-0.016-0.596-0.219-1.107-0.643-1.567l-12.192-12.965c-0.36-0.375-0.784-0.579-1.301-0.579-1.050 0-1.865 0.886-1.865 2.027 0 0.545 0.204 1.056 0.564 1.448l10.97 11.636-10.97 11.636c-0.36 0.392-0.564 0.886-0.564 1.448 0 1.142 0.815 2.027 1.865 2.027 0.501 0 0.94-0.204 1.301-0.579l12.192-12.982c0.439-0.443 0.642-0.954 0.642-1.55z"></path></svg>');
+}
 let mobileNum = document.querySelector(".mobile-num");
 
 nums.addEventListener("click", e => {

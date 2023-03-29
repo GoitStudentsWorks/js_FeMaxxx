@@ -35,14 +35,14 @@ getAndRenderNewYorkWeather();
 // getWeatherByLocation();
 
 const indexContainer = document.querySelector(`.index-main-container`);
-console.log(indexContainer);
+// console.log(indexContainer);
 const weatherContainer = document.querySelector(".weather_container");
-console.log(weatherContainer);
+// console.log(weatherContainer);
 const newsCard = document.querySelector(`.card-news`);
-console.log(newsCard);
+// console.log(newsCard);
 // indexContainer.insertBefore(weatherContainer, newsCard[2].nextSibling);
 const targetElement = newsCard[2];
-console.log(targetElement);
+// console.log(targetElement);
 // вставляем контейнер погоды перед целевым элементом
 indexContainer.insertBefore(weatherContainer, targetElement);
-console.log(newsCard.children);
+// console.log(newsCard.children);

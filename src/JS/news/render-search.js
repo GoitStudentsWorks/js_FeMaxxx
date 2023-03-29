@@ -5,18 +5,30 @@ import { btnRead } from "./btn-read";
 import { renderByWidth } from "./window-width";
 import { checkLokalStorage } from "./check-local-storage";
 
+export {
+  input,
+  form,
+  searchFormInput,
+  newsCard,
+  undefinedImages,
+  weatherContainer,
+  proccesImageCreate,
+  renderImageList,
+  onBtnCreate,
+};
+
 const input = document.querySelector(".search-input");
 // const btnSearch = document.querySelector(".open-input");
 const form = document.querySelector(".search-form");
 const newsCard = document.querySelector(".card-news");
 const undefinedImages = document.querySelector(".undefined");
 const weatherContainer = document.querySelector(".weather_container");
+const searchFormInput = input.value.trim();
 
 form.addEventListener("submit", onBtnCreate);
 
 function onBtnCreate(event) {
   event.preventDefault();
-  const searchFormInput = input.value.trim();
 
   if (!searchFormInput) {
     return;
