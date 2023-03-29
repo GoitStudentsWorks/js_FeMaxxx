@@ -13,10 +13,10 @@ loader.classList.remove("hidden");
 pagination.classList.add("hidden");
 
 setTimeout(() => {
-  window.addEventListener("load", getNews().then(renderImageList));
+  window.addEventListener("load", getNews().then(renderPopList));
 }, 1000);
 
-export function renderImageList(card) {
+export function renderPopList(card) {
   const newArray = [];
   const length = card.length;
   const numberOfCards = renderByWidth(length);

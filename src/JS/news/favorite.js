@@ -89,7 +89,7 @@ function removeToFavorite(e) {
   }
   localStorage.setItem(`favoriteCards`, JSON.stringify(dataInLocal));
   btn.parentNode.parentNode.remove();
-  if (dataInLocal === null) {
+  if (newList.childElementCount === 0) {
     undefinedImages.style.display = "block";
     return;
   }
