@@ -1,37 +1,35 @@
-
 .theme-icon__sun {
-  @media screen and (min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     display: none;
   }
   fill: transparent;
   stroke: #4b48db;
 }
 .theme-icon__moon {
-  @media screen and (min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     display: none;
   }
   fill: transparent;
   stroke: #5f6775;
 }
 
-
-.theme-icon-light{
-  @media screen and (max-width:1279px) {
+.theme-icon-light {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
-  color: #4B48DB;
+  color: #4b48db;
   font-weight: 400;
-font-size: 18px;
-line-height: 24px;
+  font-size: 18px;
+  line-height: 24px;
 }
-.theme-icon-dark{
-  @media screen and (max-width:1279px) {
+.theme-icon-dark {
+  @media screen and (max-width: 1279px) {
     display: none;
   }
   font-weight: 400;
-font-size: 18px;
-line-height: 24px;
-color: #5F6775;
+  font-size: 18px;
+  line-height: 24px;
+  color: #5f6775;
 }
 .light-theme {
   background-color: #f4f4f4;
@@ -41,38 +39,42 @@ color: #5F6775;
 .dark-theme {
   transition: var(--animation);
   background-color: #2e2e2e;
-  .theme-icon-dark{
- 
-  color: #4440F7;
+  .theme-icon-dark {
+    color: #4440f7;
   }
-  .theme-icon-light{
-    color: #F4F4F4;
+  .theme-icon-light {
+    color: #f4f4f4;
 
     opacity: 0.4;
- 
   }
 
-  .card-news__caption, .card-news__text, .card-news__caption, .card-news__text{
+  .undefined-title,
+  .card-news__caption,
+  .card-news__text,
+  .card-news__caption,
+  .card-news__text {
     color: var(--light-text-color);
-   }
-    .mob-menu {
-      background-color: #2e2e2e;
-    }
-  
-    .link, .header-list__item,  .header-logo {
-      color: #f4f4f4;
-    }
-  .icon-open-mob-menu, .icon-close-mob-menu {
+  }
+  .mob-menu {
+    background-color: #2e2e2e;
+  }
+
+  .link,
+  .header-list__item,
+  .header-logo {
+    color: #f4f4f4;
+  }
+  .icon-open-mob-menu,
+  .icon-close-mob-menu {
     stroke: #f4f4f4;
   }
-  
-  .open-login-form  {
+
+  .open-login-form {
     fill: #f4f4f4;
-  
   }
 
-  .icon-right-arrow{
-fill:  var(--light-text-color)
+  .icon-right-arrow {
+    fill: var(--light-text-color);
   }
 
   .theme-icon__sun {
@@ -90,9 +92,8 @@ fill:  var(--light-text-color)
     background-color: #2e2e2e;
     color: #f4f4f4;
     &::placeholder {
-      color: #F4F4F4;
+      color: #f4f4f4;
       opacity: 0.4;
- 
     }
   }
 }
@@ -109,8 +110,6 @@ fill:  var(--light-text-color)
     right: 16;
   }
 }
-
-
 
 .form-theme {
   display: flex;
@@ -207,5 +206,5 @@ fill:  var(--light-text-color)
   height: 20px;
   border-radius: 20px;
   border: 0.604701px solid #ffff;
- transition: var(--animation);
+  transition: var(--animation);
 }
