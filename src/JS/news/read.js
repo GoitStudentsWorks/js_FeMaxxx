@@ -67,17 +67,19 @@ function markupDateRead(date) {
 const dateListItem = document.querySelectorAll(".date-list__item");
 dateListItem[0].classList.add("hidden");
 
-btnLike(localData);
-let spanAdd = "";
-let hiddenSpan = "";
-let localFavorite = JSON.parse(localStorage.getItem("favoriteCards"));
-let checkFavorite = checkLokalStorage(card, localFavorite);
-if (checkFavorite) {
-  hiddenSpan = "favorite";
-  spanAdd = "Remove from favorite";
-} else {
-  spanAdd = "Add to favorite";
-}
+dateListItem.forEach(element => {
+  btnLike(localData);
+  let spanAdd = "";
+  let hiddenSpan = "";
+  let localFavorite = JSON.parse(localStorage.getItem("favoriteCards"));
+  let checkFavorite = checkLokalStorage(element, localFavorite);
+  if (checkFavorite) {
+    hiddenSpan = "favorite";
+    spanAdd = "Remove from favorite";
+  } else {
+    spanAdd = "Add to favorite";
+  }
+});
 
 dateListEl.addEventListener("click", event => {
   const btn = event.target.closest(`.date-list__btn`);
@@ -156,10 +158,10 @@ function form(event) {
 
   const markupBlockReadSearch = markupOfCard(newArrForMarkupSearch);
 
-  createMarkupLoad(markupBlockReadSearch);
+  createMarkupLoadMore(markupBlockReadSearch);
 }
 
-function createMarkupLoad(markupBlockDate) {
+function createMarkupLoadMore(markupBlockDate) {
   readListSearchEl.innerHTML = markupBlockDate;
   newArrForMarkupSearch = [];
 }
