@@ -14,6 +14,7 @@
 import { checkLokalStorage } from "./check-local-storage";
 import { btnLike } from "./btn-favorite";
 import { btnRead } from "./btn-read";
+const undefinedImages = document.querySelector(".undefined");
 
 const inputEl = document.querySelector(".search-input"),
   formEl = document.querySelector(".search-form");
@@ -27,14 +28,16 @@ formEl.addEventListener("submit", event => {
   let hits = checkArr(arr, value);
 
   if (hits.length === 0) {
-    block.innerHTML = "";
-    // document.querySelector(".underfined").classList.remove("underfined-hidden");
+    newList.innerHTML = "";
+    undefinedImages.style.display = "block";
     return;
   }
-
+  if (value === "" || value === null) {
+    undefinedImages.style.display = "none";
+  }
   let markup = createMarkup(hits);
-  block.innerHTML = markup;
-  //   document.querySelector(".underfined").classList.add("underfined-hidden");
+  newList.innerHTML = markup;
+  undefinedImages.style.display = "none";
 });
 
 function getLocalarr() {
@@ -53,8 +56,6 @@ function checkArr(arr, value) {
   }, []);
 }
 
-// const undefinedReadeMore = document.querySelector('.underfined');
-const block = document.querySelector(".card-news");
 const newList = document.querySelector(".card-news");
 
 // document
@@ -70,7 +71,7 @@ newList.addEventListener("click", removeToFavorite);
 const dataInLocal = JSON.parse(localStorage.getItem("favoriteCards"));
 
 if (dataInLocal === null) {
-  //   undefinedReadeMore.classList.remove("underfined-hidden");
+  undefinedImages.style.display = "block";
   return;
 }
 function removeToFavorite(e) {
@@ -95,12 +96,12 @@ function getLocalData() {
   if (localStorage.getItem("favoriteCards") === null) return;
   if (JSON.parse(localStorage.getItem("favoriteCards")).length === 0) {
     console.log("error");
-    // undefinedReadeMore.classList.remove("underfined-hidden");
+    undefinedImages.style.display = "block";
     return;
   }
   const data = JSON.parse(localStorage.getItem("favoriteCards"));
   const markup = createMarkup(data);
-  block.insertAdjacentHTML("beforeend", markup);
+  newList.insertAdjacentHTML("beforeend", markup);
 }
 
 getLocalData();

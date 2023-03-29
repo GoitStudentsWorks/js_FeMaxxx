@@ -1,16 +1,3 @@
-// import { btnRead } from "./btn-read";
-// import { markupOfCard } from "./markup-of-card";
-
-// btnRead();
-// $(document).ready(function () {
-//   $(".spoiler_title").click(function () {
-//     if ($(".spoiler").hasClass("one")) {
-//       $(".spoiler_title").not($(this)).removeClass("spoiler-active");
-//       $(".spoiler_content").not($(this).next()).slideUp(300);
-//     }
-//     $(this).toggleClass("spoiler-active").next().slideToggle(300);
-//   });
-// });
 import { btnLike } from "./btn-favorite";
 import { markupOfCard } from "./markup-of-card";
 import { checkLokalStorage } from "./check-local-storage";
@@ -19,13 +6,13 @@ const dateListEl = document.querySelector(".date-list-search");
 const readListSearchEl = document.querySelector(".date-list-search");
 const readFormEl = document.querySelector(".search-form");
 const readInputEl = document.querySelector(".search-input");
+const undefinedImages = document.querySelector(".undefined");
 
 const localData = JSON.parse(localStorage.getItem("readCards"));
 
-// const undefinedReadeMore = document.querySelector(".underfined");
 function arrLocal() {
   if (localData === null) {
-    // undefinedReadeMore.classList.remove("underfined-hidden");
+    undefinedImages.style.display = "block";
     return;
   }
   return localData;
@@ -125,8 +112,8 @@ function form(event) {
   event.preventDefault();
 
   if (readInputEl.value.trim() === "") {
-    dateListEl.classList.remove("hidden");
-    // document.querySelector(".underfined").classList.add("underfined-hidden");
+    dateListEl.classList.add("hidden");
+    undefinedImages.style.display = "block";
     readListSearchEl.classList.add("hidden");
     newArrForMarkupSearch = [];
     return;
@@ -148,20 +135,20 @@ function form(event) {
   if (newArrForMarkupSearch.length === 0) {
     dateListEl.classList.add("hidden");
     readListSearchEl.classList.add("hidden");
-    // document.querySelector(".underfined").classList.remove("underfined-hidden");
+    undefinedImages.style.display = "block";
     newArrForMarkupSearch = [];
     return;
   }
-  //   document.querySelector(".underfined").classList.add("underfined-hidden");
-  dateListEl.classList.add("hidden");
+  undefinedImages.style.display = "none";
+  dateListEl.classList.remove("hidden");
   readListSearchEl.classList.remove("hidden");
 
   const markupBlockReadSearch = markupOfCard(newArrForMarkupSearch);
 
-  createMarkupLoadMore(markupBlockReadSearch);
+  createMarkupLoad(markupBlockReadSearch);
 }
 
-function createMarkupLoadMore(markupBlockDate) {
+function createMarkupLoad(markupBlockDate) {
   readListSearchEl.innerHTML = markupBlockDate;
   newArrForMarkupSearch = [];
 }
