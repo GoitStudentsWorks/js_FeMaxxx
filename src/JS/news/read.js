@@ -156,10 +156,10 @@ function form(event) {
 
   const markupBlockReadSearch = markupOfCard(newArrForMarkupSearch);
 
-  createMarkupLoadMore(markupBlockReadSearch);
+  createMarkupLoad(markupBlockReadSearch);
 }
 
-function createMarkupLoadMore(markupBlockDate) {
+function createMarkupLoad(markupBlockDate) {
   readListSearchEl.innerHTML = markupBlockDate;
   newArrForMarkupSearch = [];
 }
