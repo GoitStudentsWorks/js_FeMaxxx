@@ -4,18 +4,8 @@ import { btnLike } from "./btn-favorite";
 import { btnRead } from "./btn-read";
 import { renderByWidth } from "./window-width";
 import { checkLokalStorage } from "./check-local-storage";
-
-// export {
-//   input,
-//   form,
-//   searchFormInput,
-//   newsCard,
-//   undefinedImages,
-//   weatherContainer,
-//   proccesImageCreate,
-//   renderImageList,
-//   onBtnCreate,
-// };
+import { getNews } from "./fetch-news-popular";
+import { renderPopList } from "./render-popular";
 
 const input = document.querySelector(".search-input");
 // const btnSearch = document.querySelector(".open-input");
@@ -39,6 +29,13 @@ function onBtnCreate(event) {
   const searchFormInput = input.value.trim();
   if (!searchFormInput) {
     return;
+  }
+  if (
+    searchFormInput === "" ||
+    searchFormInput === null ||
+    searchFormInput === undefined
+  ) {
+    getNews().then(renderPopList);
   }
   fetchImages(searchFormInput, 0).then(proccesImageCreate);
 }

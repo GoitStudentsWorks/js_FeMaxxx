@@ -91,8 +91,8 @@ function createMarkupLoadMore(markupBlockDate) {
 
 readFormEl.addEventListener("submit", form);
 
+let newArrForMarkupSearch = [];
 function form(event) {
-  let newArrForMarkupSearch = [];
   event.preventDefault();
 
   if (readInputEl.value.trim() !== "") {
