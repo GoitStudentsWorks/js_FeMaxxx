@@ -9,7 +9,7 @@ checkSize();
 let searchQuery = "";
 const axios = require("axios").default;
 
- async function fetchArticles() {
+async function fetchArticles() {
   const BASE_URL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
   const params = {
     "api-key": "zHSQzxiahl4NGmmsXRmy0bUeXAOYuqJ3",
