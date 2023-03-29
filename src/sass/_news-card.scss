@@ -16,9 +16,11 @@
 
 .card-news__item {
   position: relative;
+  overflow: hidden;
   width: 288px;
-  height: 675px;
+  height: 635px;
   @media screen and (min-width: 768px) {
+    height: 675px;
     width: 353px;
   }
   @media screen and (min-width: 1280px) {
@@ -27,8 +29,11 @@
 }
 
 .card-news__img {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 395px;
+  width: auto;
   object-fit: cover;
 }
 
@@ -73,11 +78,13 @@
 }
 
 .card-news__caption {
-  height: 132px;
   margin-top: 20px;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 1.4;
   overflow: hidden;
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
 }
 
 .card-news__text {
@@ -88,11 +95,20 @@
   overflow: hidden;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+
   line-height: 22px;
+}
+.card-news__text,
+.card-news__link,
+.card-news__time {
+  font-size: 14px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .card-news__box {
+  line-height: 1.4;
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -100,15 +116,18 @@
 
 .card-news__link {
   color: var(--accent-color);
-  font-size: 16px;
-  line-height: 22px;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
 }
 
 .card-news__time {
   color: var(--secondary-text-color);
   font-weight: 400;
-  font-size: 16px;
   line-height: 22px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .favorite {
   .card-news__add-to-favorite-btn {
@@ -122,6 +141,13 @@
   opacity: 0.5;
 }
 .card-news__read {
+  left: 170px;
+  @media screen and (min-width: 768px) {
+    left: 230px;
+  }
+  @media screen and (min-width: 1280px) {
+    left: 280px;
+  }
   position: absolute;
   display: flex;
   align-items: center;

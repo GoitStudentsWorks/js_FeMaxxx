@@ -13,6 +13,8 @@
 // });
 import { btnLike } from "./btn-favorite";
 import { markupOfCard } from "./markup-of-card";
+import { checkLokalStorage } from "./check-local-storage";
+
 const dateListEl = document.querySelector(".date-list-search");
 const readListSearchEl = document.querySelector(".date-list-search");
 const readFormEl = document.querySelector(".search-form");
@@ -66,6 +68,16 @@ const dateListItem = document.querySelectorAll(".date-list__item");
 dateListItem[0].classList.add("hidden");
 
 btnLike(localData);
+let spanAdd = "";
+let hiddenSpan = "";
+let localFavorite = JSON.parse(localStorage.getItem("favoriteCards"));
+let checkFavorite = checkLokalStorage(card, localFavorite);
+if (checkFavorite) {
+  hiddenSpan = "favorite";
+  spanAdd = "Remove from favorite";
+} else {
+  spanAdd = "Add to favorite";
+}
 
 dateListEl.addEventListener("click", event => {
   const btn = event.target.closest(`.date-list__btn`);

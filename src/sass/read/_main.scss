@@ -15,11 +15,18 @@
   padding-bottom: 40px;
 }
 .date-list__btn {
+  width: 288px;
+  @media screen and (min-width: 768px) {
+    width: 736px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1248px;
+  }
   background-color: var(--light-bg-color);
 
   display: flex;
   align-items: start;
-  width: 100%;
+
   padding-bottom: 12px;
   border-bottom: 1px solid #929292;
   margin-top: 30px;

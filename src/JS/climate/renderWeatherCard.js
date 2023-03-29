@@ -76,7 +76,7 @@ export function formatDate(date) {
 
 const currentDate = new Date();
 const formattedDate = formatDate(currentDate);
-console.log(formattedDate); // Sun, Mar 26, 2023
+// console.log(formattedDate); // Sun, Mar 26, 2023
 const date = new Date();
 const dayOfWeek = date.toLocaleDateString("en-US", { weekday: "short" }); // "Sun"
 const dayOfMonth = date.getDate(); // 26
