@@ -5,8 +5,16 @@ import { renderByWidth } from "./window-width";
 import { checkLokalStorage } from "./check-local-storage";
 
 const newsCard = document.querySelector(".card-news");
+const loader = document.querySelector(".loader");
+const weatherContainer = document.querySelector(".weather_container");
+const pagination = document.querySelector(".pagination");
+weatherContainer.style.display = "none";
+loader.classList.remove("hidden");
+pagination.classList.add("hidden");
 
-window.addEventListener("load", getNews().then(renderImageList));
+setTimeout(() => {
+  window.addEventListener("load", getNews().then(renderImageList));
+}, 1000);
 
 export function renderImageList(card) {
   const newArray = [];
@@ -100,6 +108,11 @@ export function renderImageList(card) {
     .join("");
 
   newsCard.innerHTML = markup;
+
+  loader.classList.add("hidden");
+  weatherContainer.style.display = "block";
+  pagination.classList.remove("hidden");
+
   btnLike(newArray);
   btnRead(newArray);
 }
