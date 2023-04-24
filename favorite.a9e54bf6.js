@@ -1,0 +1,2 @@
+const searchBtn=document.querySelector(".open-search-input"),btnContainer=document.querySelector(".btn-container");(()=>{const e={openMenuBtn:document.querySelector("[data-menu-open]"),closeMenuBtn:document.querySelector("[data-menu-close]"),menu:document.querySelector("[data-menu]")};function n(){e.menu.classList.toggle("visually-hidden")}e.openMenuBtn.addEventListener("click",n),e.closeMenuBtn.addEventListener("click",n)})();
+//# sourceMappingURL=favorite.a9e54bf6.js.map
