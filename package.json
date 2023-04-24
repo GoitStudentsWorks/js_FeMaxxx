@@ -2,10 +2,10 @@
   "name": "news",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://FeMaxxx.github.io/news",
+  "homepage": "https://GoitStudentsWorks.github.io/js_FeMaxxx",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /news/"
+    "build": "parcel build src/*.html --public-url /js_FeMaxxx/"
   },
   "repository": {
     "type": "git",
